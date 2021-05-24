@@ -14,12 +14,16 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
 
 ### Plugins
 
-1. **indentLine:** [VA]([Vim Awesome](https://vimawesome.com/plugin/indentline)) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
+1. **indentLine:** [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
-2. 
+2. **Vim Airline**: [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
+
+3. Nerd Tree
+
+4. 
 
 ### Temas
 
-1. **Nord Vim** [VA]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+1. **Nord Vim** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
 
 

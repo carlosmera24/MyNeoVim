@@ -38,10 +38,11 @@ set spelllang=en,es  "Corregir palabras usando diccionarios en inglés y españo
 
 "Instalar plugins con vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'yggdroot/indentline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Temas
 Plug 'arcticicestudio/nord-vim'
-"Visualización de indentación
-Plug 'yggdroot/indentline'
 call plug#end()
 
 "------------- Comandos y atajos de teclado personalizados
