@@ -33,7 +33,7 @@ set smartcase  "No ignorar mayúsculas si la palabra a buscar contiene mayúscul
 
 set clipboard=unnamedplus "Integrar la copia con el portapapeles, alternativo unnamed
 
-set encoding=utf-8 "Permitir caracteres especiales
+set encoding=UTF-8 "Permitir caracteres especiales
 set spelllang=en,es  "Corregir palabras usando diccionarios en inglés y español
 
 "Instalar plugins con vim-plug
@@ -41,6 +41,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yggdroot/indentline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 "Temas
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
@@ -55,6 +57,11 @@ vmap <F5> :source %<CR>
 nnoremap <leader>w :w<CR>
 "Abrir terminal con Ctrl+t
 nnoremap <c-t> :split<CR>:ter<CR>
+"NerdTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+"nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 "Configuración del tema
 set termguicolors  "Activa true colors en la terminal
