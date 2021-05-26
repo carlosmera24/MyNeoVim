@@ -2,6 +2,37 @@
 
 Este repositorio tiene como objetivo tener un respaldo de configuración del editor [**NeoVim**](https://neovim.io/), el cual usa y mejor [**Vim**](https://www.vim.org/).
 
+## Instalación:
+1. En debian se puede instalar desde los repositorios oficiales:
+   ```
+   sudo apt install neovim
+   ```
+2. Instalar librerías python
+   ```shell
+   sudo apt install python-pip python3-pip #Agregar según se requiera
+   python -m pip install neovim
+   ```
+3. Se recomientda mantener las librerías de Python actualizadas:
+   ```shell
+   python -m pip install --upgrade neovim
+   ```
+4. Instalar librerías ruby
+   ```shell
+   sudo apt install ruby ruby-dev
+   ```
+5. Instalar interfaz de ruby
+   ```shell
+   sudo gem install neovim
+   ```
+6. Comprobar dependencias *NeoVim*:
+   ```shell
+   nvim +checkhealth
+   ```
+
+7. Habilitar la integración con el portapapeles: se puede instalar xclip o xsel con apt
+   ```shell
+   sudo apt install xclip
+   ```
 ## Configuración
 
 NeoVim utiliza la configuración en el archivo **init.vim**, el cual debe estar en la ruta _~/.config/nvim/init.vim_ para el caso de linux, este archivo contiene mi respaldo con la configuración que uso, entre ellos los plugins y temas.
@@ -24,8 +55,6 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
    mkdir -p ~/.local/share/fonts
    cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
    ```
-   
-   
 
 5. 
 
