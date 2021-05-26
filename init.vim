@@ -41,13 +41,20 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yggdroot/indentline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'jiangmiao/auto-pairs'
+" Nerd Tree
 Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"----- Nerd Tree
 "Temas
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
-"------------- Comandos y atajos de teclado personalizados
+"-----------------------------------------------------------------------------------------
+" Comandos y atajos de teclado personalizados
+"-----------------------------------------------------------------------------------------
 "Tecla líder
 let mapleader = " "
 "Recargar configuración
@@ -57,13 +64,22 @@ vmap <F5> :source %<CR>
 nnoremap <leader>w :w<CR>
 "Abrir terminal con Ctrl+t
 nnoremap <c-t> :split<CR>:ter<CR>
-"NerdTree
+" NerdTree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 "nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-"Configuración del tema
+"-----------------------------------------------------------------------------------------
+" Configuración de Airline
+"-----------------------------------------------------------------------------------------
+let g:airline#extensions#tabline#enabled = 1 "Agregar barra superior
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"-----------------------------------------------------------------------------------------
+" Configuración del tema
+"-----------------------------------------------------------------------------------------
 set termguicolors  "Activa true colors en la terminal
 set background=dark  "Fondo del tema: light o dark
 colorscheme nord  "Nombre del tema
