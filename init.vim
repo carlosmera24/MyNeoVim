@@ -42,12 +42,24 @@ Plug 'yggdroot/indentline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 " Nerd Tree
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "----- Nerd Tree
+" FZF
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"----- FZF
+" Sintaxis
+Plug 'posva/vim-vue'
+Plug 'jwalton512/vim-blade'
+Plug 'noahfrederick/vim-laravel'
+"----- Sintaxis
+"Autocompletado
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
@@ -84,7 +96,12 @@ nnoremap <leader><BS> :bd<CR>
 let g:airline#extensions#tabline#enabled = 1 "Agregar barra superior
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 
+" Coc
+"let g:coc_disable_startup_warning = 1
 "-----------------------------------------------------------------------------------------
 " Configuración del tema
 "-----------------------------------------------------------------------------------------
