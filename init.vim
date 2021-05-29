@@ -59,7 +59,7 @@ Plug 'jwalton512/vim-blade'
 Plug 'noahfrederick/vim-laravel'
 "----- Sintaxis
 "Autocompletado
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
