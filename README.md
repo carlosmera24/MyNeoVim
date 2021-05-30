@@ -157,7 +157,20 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
     3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
     4. 
     
-    > TODO: Hasta el momento tengo problemas al ejecutarlo En el portatil, surgen unos errores, pendiente por definir e implementar
+    > **Nota:** Al no tener versiones actualizadas de **Neovim** se pueden generar problemas de compatibilidad con *Coc*,  para ello opté en mi protatil con *Debian buster* instalar la versión de NeoVim utilizando AppImage, la documentación está en la página oficial, de esa manera logro tener la última versión y libre de errores:
+    >
+    > ```shell
+    > curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    > chmod u+x nvim.appimage
+    > ./nvim.appimage
+    > #Luego agregar el comando globalmente, pues da error al ejecutar el comando nvim
+    > ./nvim.appimage --appimage-extract
+    > ./squashfs-root/AppRun --version
+    > sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+    > nvim
+    > ```
+    
+    
     
 15. 
 
