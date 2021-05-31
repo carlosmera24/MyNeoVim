@@ -91,6 +91,8 @@ nnoremap <S-Tab> :bn<CR>
 nnoremap <leader><Tab> :bp<CR>
 " Anterior Archivo (:BDelete) Leader+Backspace
 nnoremap <leader><BS> :bd<CR>
+" Abrir FZF con Leader+t 
+nnoremap <leader>t :FZF<CR>
 "-----------------------------------------------------------------------------------------
 "-----------------------------------------------------------------------------------------
 " Configuración de Airline
