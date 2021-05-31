@@ -144,20 +144,33 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
 
 10. **Sintanxis**:
 
-   11. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
-
-   12. **Vim-Blade:** [Vim Awesome](https://vimawesome.com/plugin/vim-blade-shouldve-said-no) [GitHub](https://github.com/jwalton512/vim-blade) 
-
-   3. **Vim-Laravel:** [Vim Awesome](https://vimawesome.com/plugin/vim-laravel-face-rejection) [GitHub](https://github.com/noahfrederick/vim-laravel) 
+       1. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
+       2. **Vim-Blade:** [Vim Awesome](https://vimawesome.com/plugin/vim-blade-shouldve-said-no) [GitHub](https://github.com/jwalton512/vim-blade) 
+       3. **Vim-Laravel:** [Vim Awesome](https://vimawesome.com/plugin/vim-laravel-face-rejection) [GitHub](https://github.com/noahfrederick/vim-laravel) 
+       4. **Typescript-Vim:** [Vim Awesome](https://vimawesome.com/plugin/typescript-vim) [GitHub](https://github.com/leafgarland/typescript-vim) 
+       5. **Vim-JavaScript:** [Vim Awesome](https://vimawesome.com/plugin/vim-javascript) [GitHub](https://github.com/pangloss/vim-javascript) 
+       6. **PHP-Vim:** [Vim Awesome](https://vimawesome.com/plugin/php-vim-shouldve-said-no) [GitHub](https://github.com/stanangeloff/php.vim) 
+       7. **Vim-Php-CS-Fixer:** [Vim Awesome](https://vimawesome.com/plugin/vim-php-cs-fixer) [GitHub](https://github.com/guenti/vim-php-cs-fixer) 
 
 11. **Coc:** [Vim Awesome](https://vimawesome.com/plugin/coc-nvim) [GitHub](https://github.com/neoclide/coc.nvim) Utilizado para autocompletar código, es necesario instalar cada complemento por separado, es decir, para cada lenguaje de autocompletado que se desee se debe realizar la instalación, para ello, una vez se tenga instalado **Coc** bastará con ejecutar *:CocInstall [Nombre_Libreria]*, para instalar complementos de lenguaje basta con ejecutar *:CocInstall [paquete]*
 
     1. **Coc-PHPLS:** [Vim Awesome](https://vimawesome.com/plugin/coc-phpls) [GitHub](https://github.com/marlonfan/coc-phpls)
     2. **Coc-Eslint**: [Vim Awesome](https://vimawesome.com/plugin/coc-eslint) [GitHub](https://github.com/neoclide/coc-eslint) 
     3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
-    4. 
+    4. **Coc-Ventur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
     
-    > TODO: Hasta el momento tengo problemas al ejecutarlo En el portatil, surgen unos errores, pendiente por definir e implementar
+    > **Nota:** Al no tener versiones actualizadas de **Neovim** se pueden generar problemas de compatibilidad con *Coc*, para ello opté en mi protatil con *Debian buster* instalar la versión de NeoVim utilizando AppImage, la documentación está en la página oficial, de esa manera logro tener la última versión y libre de errores:
+    >
+    > ```shell
+    > curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    > chmod u+x nvim.appimage
+    > ./nvim.appimage
+    > #Luego agregar el comando globalmente, pues da error al ejecutar el comando nvim
+    > ./nvim.appimage --appimage-extract
+    > ./squashfs-root/AppRun --version
+    > sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+    > nvim
+    > ```
     
 15. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
@@ -182,4 +195,5 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
 
 ### Temas
 
-1. **Nord Vim** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+1. **Nord Vim:** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+

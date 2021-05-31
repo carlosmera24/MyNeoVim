@@ -59,7 +59,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'posva/vim-vue'
 Plug 'jwalton512/vim-blade'
 Plug 'noahfrederick/vim-laravel'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'StanAngeloff/php.vim'
+Plug 'guenti/vim-php-cs-fixer'
 "----- Sintaxis
+
 "Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Temas
@@ -103,9 +108,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
-
-" Coc
-"let g:coc_disable_startup_warning = 1
 "-----------------------------------------------------------------------------------------
 " Configuración del tema
 "-----------------------------------------------------------------------------------------
