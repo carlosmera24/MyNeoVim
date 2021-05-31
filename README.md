@@ -161,6 +161,25 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
     
 15. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
+16. **Emmet.Vim:** [Vim Awesome](https://vimawesome.com/plugin/emmet-vim) [GitHub](https://github.com/mattn/emmet-vim) Generación de código a partir de abreviaciones similar a [Emmet](https://emmet.io/), ejemplo:
+
+    ```html
+    <!-- div>p#foo$*3>a -> Presionar Ctr+y, genera:-->
+     <div>
+          <p id="foo1">
+              <a href=""></a>
+          </p>
+          <p id="foo2">
+              <a href=""></a>
+          </p>
+          <p id="foo3">
+              <a href=""></a>
+          </p>
+      </div>
+    ```
+
+    
+
 ### Temas
 
 1. **Nord Vim** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)

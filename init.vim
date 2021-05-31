@@ -44,6 +44,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'mattn/emmet-vim'
 " Nerd Tree
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -76,7 +77,7 @@ vmap <F5> :source %<CR>
 "Guardar usando Leader+w
 nnoremap <leader>w :w<CR>
 "Abrir terminal con Ctrl+t
-nnoremap <c-t> :split<CR>:ter<CR>
+nnoremap <c-t> :vertical<CR>:ter<CR>
 "-------- NerdTree -------------------------------------------------
 nnoremap <leader>e :NERDTreeFocus<CR>
 nnoremap <C-e> :NERDTree<CR>
