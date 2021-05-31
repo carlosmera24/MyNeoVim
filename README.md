@@ -159,7 +159,7 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
     
     > TODO: Hasta el momento tengo problemas al ejecutarlo En el portatil, surgen unos errores, pendiente por definir e implementar
     
-15. 
+15. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
 ### Temas
 
