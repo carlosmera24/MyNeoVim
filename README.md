@@ -46,8 +46,8 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
    ```shell
    sudo apt install xclip
    ```
-   
-   ## Configuración
+
+## Configuración
 
 NeoVim utiliza la configuración en el archivo **init.vim**, el cual debe estar en la ruta _~/.config/nvim/init.vim_ para el caso de linux, este archivo contiene mi respaldo con la configuración que uso, entre ellos los plugins y temas.
 
@@ -140,7 +140,10 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
 
       Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
-9. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive)  Integra comandos para el uso de git, además se integra muy bien con **Airline**
+9. **Git:**
+
+   1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive)  Integra comandos para el uso de git, además se integra muy bien con **Airline**
+   2. **vim-gitgutter:** [Vim Awesome](https://vimawesome.com/plugin/vim-gitgutter) [GitHub](https://github.com/airblade/vim-gitgutter) Resalta dentro de los archivos los cambios realizados.
 
 10. **Sintanxis**:
 
@@ -150,7 +153,7 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
        4. **Typescript-Vim:** [Vim Awesome](https://vimawesome.com/plugin/typescript-vim) [GitHub](https://github.com/leafgarland/typescript-vim) 
        5. **Vim-JavaScript:** [Vim Awesome](https://vimawesome.com/plugin/vim-javascript) [GitHub](https://github.com/pangloss/vim-javascript) 
        6. **PHP-Vim:** [Vim Awesome](https://vimawesome.com/plugin/php-vim-shouldve-said-no) [GitHub](https://github.com/stanangeloff/php.vim) 
-       7. **Vim-Php-CS-Fixer:** [Vim Awesome](https://vimawesome.com/plugin/vim-php-cs-fixer) [GitHub](https://github.com/guenti/vim-php-cs-fixer) 
+       7. **Vim-Php-CS-Fixer:** [Vim Awesome](https://vimawesome.com/plugin/vim-php-cs-fixer) [GitHub](https://github.com/guenti/vim-php-cs-fixer) Con **PHP-Vim** basta para resaltar la sintaxis.
 
 11. **Coc:** [Vim Awesome](https://vimawesome.com/plugin/coc-nvim) [GitHub](https://github.com/neoclide/coc.nvim) Utilizado para autocompletar código, es necesario instalar cada complemento por separado, es decir, para cada lenguaje de autocompletado que se desee se debe realizar la instalación, para ello, una vez se tenga instalado **Coc** bastará con ejecutar *:CocInstall [Nombre_Libreria]*, para instalar complementos de lenguaje basta con ejecutar *:CocInstall [paquete]*
 
@@ -158,7 +161,8 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
     2. **Coc-Eslint**: [Vim Awesome](https://vimawesome.com/plugin/coc-eslint) [GitHub](https://github.com/neoclide/coc-eslint) 
     3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
     4. **Coc-Ventur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
-    
+    5. **Coc-CSS:** [Vim Awesome](https://vimawesome.com/plugin/coc-css) [GitHub](https://github.com/neoclide/coc-css) VueJS
+
     > **Nota:** Al no tener versiones actualizadas de **Neovim** se pueden generar problemas de compatibilidad con *Coc*, para ello opté en mi protatil con *Debian buster* instalar la versión de NeoVim utilizando AppImage, la documentación está en la página oficial, de esa manera logro tener la última versión y libre de errores:
     >
     > ```shell
@@ -171,10 +175,10 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
     > sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
     > nvim
     > ```
-    
-15. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
-16. **Emmet.Vim:** [Vim Awesome](https://vimawesome.com/plugin/emmet-vim) [GitHub](https://github.com/mattn/emmet-vim) Generación de código a partir de abreviaciones similar a [Emmet](https://emmet.io/), ejemplo:
+12. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
+
+13. **Emmet.Vim:** [Vim Awesome](https://vimawesome.com/plugin/emmet-vim) [GitHub](https://github.com/mattn/emmet-vim) Generación de código a partir de abreviaciones similar a [Emmet](https://emmet.io/), ejemplo:
 
     ```html
     <!-- div>p#foo$*3>a -> Presionar Ctr+y, genera:-->
@@ -191,9 +195,33 @@ Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y 
       </div>
     ```
 
-    
+14. **VIM-INTERESTINGWORDS:** [Vim Awesome](https://vimawesome.com/plugin/vim-interestingwords-safe-and-sound) [GitHub](https://github.com/lfv89/vim-interestingwords) Permite seleccionar palabras y sus ocurrencias en el texto, uso simpre, seleccionar palabra y presionar _<leader>+k_ para resaltar y _<leader>+K_ para eliminar el resaltado; y navegar entre las ocurrencias utilizando _<leader>+n_ y _<leader>+N_.
 
 ### Temas
 
 1. **Nord Vim:** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+
+## Solución de Errores
+
+1. **redrawtime exceeded syntax highlighting disabled**:
+
+   * Se puede instalar [Source-highlight](https://www.gnu.org/software/src-highlite/) *sudo apt install source-highlight*.
+
+   * *:syn clear phpHereDoc*: Ejecutarlo támbien ayuda.
+
+   * Agregar a la configuración de Vim *let g:loaded_matchparen = 1* incrementa la velocidad de carga de archivos PHP.
+
+   * Por último funciona agregar a la configuración:
+
+     ```bash
+     set redrawtime=10000
+     syntax sync fromstart
+     set re=1
+     ```
+
+     
+
+2. 
+
+
 

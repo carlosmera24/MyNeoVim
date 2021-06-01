@@ -36,6 +36,11 @@ set clipboard=unnamedplus "Integrar la copia con el portapapeles, alternativo un
 set encoding=UTF-8 "Permitir caracteres especiales
 set spelllang=en,es  "Corregir palabras usando diccionarios en inglés y español
 
+" Solucionar problemas con la sintaxis en arvhivos grandes
+set redrawtime=10000
+syntax sync fromstart
+set re=1
+
 "Instalar plugins con vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yggdroot/indentline'
@@ -45,6 +50,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
+Plug 'lfv89/vim-interestingwords'
+Plug 'airblade/vim-gitgutter'
 " Nerd Tree
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -62,7 +69,7 @@ Plug 'noahfrederick/vim-laravel'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'StanAngeloff/php.vim'
-Plug 'guenti/vim-php-cs-fixer'
+"Plug 'guenti/vim-php-cs-fixer'
 "----- Sintaxis
 
 "Autocompletado
@@ -108,6 +115,10 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
+
+" Solución para archivos php lentos
+let g:loaded_matchparen = 1
+
 "-----------------------------------------------------------------------------------------
 " Configuración del tema
 "-----------------------------------------------------------------------------------------
