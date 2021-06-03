@@ -120,7 +120,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:loaded_matchparen = 1
 
 "-----------------------------------------------------------------------------------------
-" Folding, activar como indent y permitir el uso manual para crer
+" Folding, activar como indent y permitir el uso manual para crear nuevos
 "-----------------------------------------------------------------------------------------
 augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
