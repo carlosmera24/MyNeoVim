@@ -168,21 +168,44 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 
 8. **FZF-Vim:** [Vim Awesome](https://vimawesome.com/plugin/fzf-vim) [GitHub](https://github.com/junegunn/fzf.vim) Integra funcionalidades para realizar busqueda de archivos con el complemento para terminal **FZF** ([Vim Awesome](https://vimawesome.com/plugin/fzf) [GitHub](https://github.com/junegunn/fzf)). Según la documentación encontrada, FZF es un buscador de archivos para terminales muy rápido y versatil, para instalarlo en Vim es necesario primero realizar la instalación en el sistema de la siguiente manera:
 
-   1. **Instalar FZF en el sistema:** En la documentación oficial está las diversas posibilidades para instalar, para mi caso lo realizo utilizando mi gestor de paquetes (Debian APT)
+   1. **Instalar FZF en el sistema:** En la documentación oficial está las diversas posibilidades para instalar
 
-      ```shell
-      sudo apt install fzf
-      ```
+      - **Linux:** para mi caso lo realizo utilizando mi gestor de paquetes (Debian APT)		
+
+        ```shell
+        sudo apt install fzf
+        ```
 
       > A este punto podemos ejecutar en terminal **fzf**  y presionar **Enter**, inmediatamente listara los archivos y podemos ingresar la busqueda que queramos en el directorio actual, nos desplazamos usando las flechas del teclado y al presionar **Enter** finaliza el programa listando el documento seleccionado. **Ctrl+R** para buscar en comando.
 
+      - **Mac:** Instalar usando *Homebrew*:
+
+        ```shell
+        brew install fzf #Error en Mac M1 instalar:
+        arch -arm64 brew install fzf
+        ```
+
+        
+
    2. **Instalar Ripgrep:** Se recomienda la instalación para implementar la busca dentro de los archivos, su instalación es similar y se pude encontrar la docuemntación en [GitHub](https://github.com/BurntSushi/ripgrep)
 
-      ```shell
-      sudo apt install ripgrep
-      ```
+      - **Linux:**
+
+        ```shell
+        sudo apt install ripgrep
+        ```
 
       > Podemos ejecutarlo con **rg -i [cadena a buscar]**
+
+      - **Mac:**
+
+        ```shell
+        brew install ripgrep
+        #O en Mac M1:
+        arch -arm64 brew install ripgrep
+        ```
+
+        
 
       Para integrarlo con **FZF** es necesario agregar la siguiente función en *.bashrc* o *.zshrc* según el shell usado, en mi caso es bashrc en *~/.bashrc*
 
@@ -235,7 +258,7 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
     1. **Coc-PHPLS:** [Vim Awesome](https://vimawesome.com/plugin/coc-phpls) [GitHub](https://github.com/marlonfan/coc-phpls)
     2. **Coc-Eslint**: [Vim Awesome](https://vimawesome.com/plugin/coc-eslint) [GitHub](https://github.com/neoclide/coc-eslint) 
     3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
-    4. **Coc-Ventur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
+    4. **Coc-Vetur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
     5. **Coc-CSS:** [Vim Awesome](https://vimawesome.com/plugin/coc-css) [GitHub](https://github.com/neoclide/coc-css) VueJS
 
     > **Nota:** Al no tener versiones actualizadas de **Neovim** se pueden generar problemas de compatibilidad con *Coc*, para ello opté en mi protatil con *Debian buster* instalar la versión de NeoVim utilizando AppImage, la documentación está en la página oficial, de esa manera logro tener la última versión y libre de errores:
@@ -249,6 +272,12 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
     > ./squashfs-root/AppRun --version
     > sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
     > nvim
+    > ```
+
+    > Se puede instalar todo en una sola linea:
+    >
+    > ```shell
+    > :CocInstall coc-phpls coc-eslint coc-vetur coc-css
     > ```
 
 12. **EditorConfig-Vim:** [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
