@@ -37,7 +37,7 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
 
    
 
-3. Se recomientda mantener las librerías de Python actualizadas:
+3. Se recomienda mantener las librerías de Python actualizadas:
 
    - **Linux:**
 
