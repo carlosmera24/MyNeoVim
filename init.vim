@@ -74,6 +74,8 @@ Plug 'StanAngeloff/php.vim'
 
 "Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Multiples cursores en selcción
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
 call plug#end()
@@ -105,6 +107,8 @@ nnoremap <leader><Tab> :bp<CR>
 nnoremap <leader><BS> :bd<CR>
 " Abrir FZF con Leader+t 
 nnoremap <leader>t :FZF<CR>
+" Vim Visual Multi
+let g:VM_mouse_mappings = 1
 "-----------------------------------------------------------------------------------------
 "-----------------------------------------------------------------------------------------
 " Configuración de Airline
