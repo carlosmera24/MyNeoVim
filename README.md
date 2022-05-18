@@ -22,6 +22,12 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
    
    ```shell
    brew install neovim
+   #Update
+   brew upgrade neovim
+   #Update all and homebrew itself
+   brew update
+   #Upgrade everything:
+   brew upgrade
    ```
 
 2. Instalar librerías python
