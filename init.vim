@@ -54,6 +54,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 "_____ LuaLine status bar
+" BufLine (No requerido si se usa AirLine, ya que en la configuración se puede
+" agregar el tab superior)
+Plug 'ap/vim-buftabline'
 " AirLine
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
@@ -134,16 +137,22 @@ let g:VM_mouse_mappings = 1
 lua << END
 require('lualine').setup()
 END
-"
+
 "-----------------------------------------------------------------------------------------
 " Nvim Comment
+"-----------------------------------------------------------------------------------------
 lua << END
 require('nvim_comment').setup()
 END
 
+"-----------------------------------------------------------------------------------------
+"Configuración BufTabLine
+"-----------------------------------------------------------------------------------------
+let g:buftabline_numbers = 1 "Numero del buffer
+let g:buftabline_indicators = 1 "Indicador de modificación
+let g:buftabline_separators = 1 "Separador
 " Solución para archivos php lentos
 let g:loaded_matchparen = 1
-
 "-----------------------------------------------------------------------------------------
 " Folding, activar como indent y permitir el uso manual para crear nuevos
 "-----------------------------------------------------------------------------------------

@@ -113,11 +113,13 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 
 1. **indentLine:** [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
-2. **LuaLine:** [GitHub ](https://github.com/nvim-lualine/lualine.nvim). Bara de estado optimizada, según recomendaciones en la web, es más ligero.
+2. **LuaLine:** [GitHub ](https://github.com/nvim-lualine/lualine.nvim). Bara de estado optimizada, según recomendaciones en la web, es más ligero, pasa a reemplazar **Vim AirLine**   
    
    > Importante instalar primero el plugin con PlugInstall/PlugUpdate y luego habilitar la configuración para evitar errores.
 
-3. **Vim Airline**: [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
+3. **BufTabLine**: [GitHub](https://github.com/ap/vim-buftabline) [Vim Awesome](https://vimawesome.com/plugin/buftabline) Tras no usar *Vim AirLine* es necesario tener otro tab para mostrar los buffers activos, esta funcionalidad la permite este plugin, sencillo y práctico, para iniciar solo basta con la instalación
+
+4. **Vim Airline**: [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
    
    - **Ajuste de fuentes**: Para que visualice correctamente con > en la información, es necesario instalar la fuente power line:
      
