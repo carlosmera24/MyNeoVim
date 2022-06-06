@@ -113,7 +113,11 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
 
 1. **indentLine:** [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
-2. **Vim Airline**: [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
+2. **LuaLine:** [GitHub ](https://github.com/nvim-lualine/lualine.nvim). Bara de estado optimizada, según recomendaciones en la web, es más ligero.
+   
+   > Importante instalar primero el plugin con PlugInstall/PlugUpdate y luego habilitar la configuración para evitar errores.
+
+3. **Vim Airline**: [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
    
    - **Ajuste de fuentes**: Para que visualice correctamente con > en la información, es necesario instalar la fuente power line:
      
@@ -296,6 +300,22 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
     - Iniciar modo inserción con `i,a,I,A`
     
     - Habilitar el uso del cursor agregar `let g:VM_mouse_mappings = 1` en el archivo de configuración, seleccionar con `Ctrl-Click` y salir con `Ctrl-Click derecho`
+
+16. **Nvim Commnet**:  [GitHub](https://github.com/terrortylor/nvim-comment) Permite agregar comentario o commentar lineas de codigo:
+    
+    - Comentar/Descomentar linea actual `gcc`
+    
+    - Comentar lineas arriba/abajo `gc{count}{motion}` donde *count* es el numero de lienas a comentar y *motion* la dirección (j|k|flechas).
+    
+    - Comenta/Descomenta un párrafo `gcip`
+    
+    - Comenta/Descomenta linea actual `gc4w` 
+    
+    - `gc4j` comment/uncomment 4 lines below the current line
+    
+    - Borra bloque comentado `dic`
+    
+    - Descomenta un bloque `gcic` 
 
 ### Temas
 

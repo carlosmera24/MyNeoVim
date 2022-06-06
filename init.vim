@@ -44,14 +44,20 @@ set re=1
 "Instalar plugins con vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'yggdroot/indentline'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'airblade/vim-gitgutter'
+" LuaLine status bar
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+"_____ LuaLine status bar
+" AirLine
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"_____ AirLine status bar
 " Nerd Tree
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -71,8 +77,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'StanAngeloff/php.vim'
 "Plug 'guenti/vim-php-cs-fixer'
 "----- Sintaxis
-
-"Autocompletado
+" Comentar 
+Plug 'terrortylor/nvim-comment'
+" Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Multiples cursores en selcción
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -113,13 +120,26 @@ let g:VM_mouse_mappings = 1
 "-----------------------------------------------------------------------------------------
 " Configuración de Airline
 "-----------------------------------------------------------------------------------------
-let g:airline#extensions#tabline#enabled = 1 "Agregar barra superior
-let g:airline#extensions#tabline#buffer_nr_show = 1 "Agregar numero de buffer a la barra superior
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#hunks#enabled = 0
-let g:airline#extensions#branch#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1 "Agregar barra superior
+"let g:airline#extensions#tabline#buffer_nr_show = 1 "Agregar numero de buffer a la barra superior
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_powerline_fonts = 1
+"let g:airline#extensions#hunks#enabled = 0
+"let g:airline#extensions#branch#enabled = 1
+
+"-----------------------------------------------------------------------------------------
+" Configuración LuaLine Status Bar
+"-----------------------------------------------------------------------------------------
+lua << END
+require('lualine').setup()
+END
+"
+"-----------------------------------------------------------------------------------------
+" Nvim Comment
+lua << END
+require('nvim_comment').setup()
+END
 
 " Solución para archivos php lentos
 let g:loaded_matchparen = 1
