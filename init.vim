@@ -88,6 +88,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 
 "-----------------------------------------------------------------------------------------
@@ -180,5 +181,8 @@ endfunction
 " Configuración del tema
 "-----------------------------------------------------------------------------------------
 set termguicolors  "Activa true colors en la terminal
-set background=dark  "Fondo del tema: light o dark
-colorscheme nord  "Nombre del tema
+" ---- Nord
+" set background=dark  "Fondo del tema: light o dark
+" colorscheme nord  "Nombre del tema
+" ---- OneDark
+colorscheme onedark  "Nombre del tema
