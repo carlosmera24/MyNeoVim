@@ -89,6 +89,9 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'gosukiwi/vim-atom-dark'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 "-----------------------------------------------------------------------------------------
@@ -186,3 +189,11 @@ set termguicolors  "Activa true colors en la terminal
 " colorscheme nord  "Nombre del tema
 " ---- OneDark
 colorscheme onedark  "Nombre del tema
+" ---- OneDark
+" colorscheme atom-dark  "Nombre del tema
+" ---- Dracula
+" colorscheme dracula
+"---- VimHybrid
+" set background=dark
+" colorscheme hybrid  "Nombre del tema
+" let g:hybrid_custom_term_colors = 1
