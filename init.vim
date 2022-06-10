@@ -80,7 +80,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'StanAngeloff/php.vim'
 "Plug 'guenti/vim-php-cs-fixer'
 "----- Sintaxis
-" Comentar 
+"Comentar 
 Plug 'terrortylor/nvim-comment'
 " Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -88,10 +88,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
-Plug 'joshdick/onedark.vim'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'w0ng/vim-hybrid'
+" Plug 'joshdick/onedark.vim'
+" Plug 'gosukiwi/vim-atom-dark'
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 "-----------------------------------------------------------------------------------------
@@ -185,10 +185,10 @@ endfunction
 "-----------------------------------------------------------------------------------------
 set termguicolors  "Activa true colors en la terminal
 " ---- Nord
-" set background=dark  "Fondo del tema: light o dark
-" colorscheme nord  "Nombre del tema
+set background=dark  "Fondo del tema: light o dark
+colorscheme nord  "Nombre del tema
 " ---- OneDark
-colorscheme onedark  "Nombre del tema
+" colorscheme onedark  "Nombre del tema
 " ---- OneDark
 " colorscheme atom-dark  "Nombre del tema
 " ---- Dracula
