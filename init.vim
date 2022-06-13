@@ -88,6 +88,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "Temas
 Plug 'arcticicestudio/nord-vim'
+" Plug 'cocopon/iceberg.vim'
 " Plug 'joshdick/onedark.vim'
 " Plug 'gosukiwi/vim-atom-dark'
 " Plug 'dracula/vim', { 'as': 'dracula' }
@@ -149,7 +150,7 @@ lua << END
 require('nvim_comment').setup()
 END
 
-"-----------------------------------------------------------------------------------------
+" -----------------------------------------------------------------------------------------
 "Configuración BufTabLine
 "-----------------------------------------------------------------------------------------
 let g:buftabline_numbers = 1 "Numero del buffer
@@ -187,9 +188,11 @@ set termguicolors  "Activa true colors en la terminal
 " ---- Nord
 set background=dark  "Fondo del tema: light o dark
 colorscheme nord  "Nombre del tema
+" ---- Iceberg.vim
+" colorscheme iceberg  
 " ---- OneDark
 " colorscheme onedark  "Nombre del tema
-" ---- OneDark
+" ---- AtomDark
 " colorscheme atom-dark  "Nombre del tema
 " ---- Dracula
 " colorscheme dracula
