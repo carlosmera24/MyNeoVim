@@ -81,7 +81,10 @@ Plug 'StanAngeloff/php.vim'
 "Plug 'guenti/vim-php-cs-fixer'
 "----- Sintaxis
 "Comentar 
-Plug 'terrortylor/nvim-comment'
+" Plug 'terrortylor/nvim-comment'
+Plug 'tpope/vim-commentary'
+Plug 'suy/vim-context-commentstring'
+" ----- Comentar
 " Autocompletado
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Multiples cursores en selcción
@@ -146,9 +149,9 @@ END
 "-----------------------------------------------------------------------------------------
 " Nvim Comment
 "-----------------------------------------------------------------------------------------
-lua << END
-require('nvim_comment').setup()
-END
+" lua << END
+" require('nvim_comment').setup()
+" END
 
 " -----------------------------------------------------------------------------------------
 "Configuración BufTabLine
@@ -180,6 +183,7 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" Activar Highlight colors
 
 "-----------------------------------------------------------------------------------------
 " Configuración del tema
