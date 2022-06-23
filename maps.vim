@@ -24,3 +24,5 @@ nnoremap <leader><Tab> :bp<CR>
 nnoremap <leader><BS> :bd<CR>
 " Abrir FZF con Leader+t 
 nnoremap <leader>t :FZF<CR>
+" Abrir Rg busqueda con leader+F (leader+Shift+f)
+nnoremap <leader>F :Rg<CR>
