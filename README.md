@@ -350,7 +350,22 @@ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuserc
     - Borra bloque comentado `dic`
     
     - Descomenta un bloque `gcic` 
-    20. **Navegación entre splits (tmux)**: Uso en combinación 
+
+20. **Colorizer**: [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
+    
+    - `:ColorHighlight`: Resaltar colores
+    
+    - `:ColorClear`: Limpiar resaltado
+    
+    - `:h colorizer`: Ayuda y más comandos
+
+21. **Vim-matchopen**: [GitHub](https://github.com/arnar/vim-matchopen) Resalta parentesis:
+    
+    - `:DoMatchLasOpen`: Hbilitar
+    
+    - `:NoMatchLastOpen`: Inhabilitar
+
+22. 
 
 ### Temas
 
