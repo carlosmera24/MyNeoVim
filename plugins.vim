@@ -6,7 +6,7 @@ Plug 'mattn/emmet-vim'
 Plug 'lfv89/vim-interestingwords'
 Plug 'airblade/vim-gitgutter'
 Plug 'chrisbra/colorizer'
-Plug 'arnar/vim-matchopen'
+" Plug 'arnar/vim-matchopen'
 
 " LuaLine status bar
 Plug 'nvim-lualine/lualine.nvim'
