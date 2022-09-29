@@ -4,7 +4,7 @@
 "Tecla líder
 let mapleader = " "
 "Recargar configuración
-nmap <F5> :source %<CR>
+nmap <C-F5> :source %<CR>
 "Guardar usando Leader+w
 nnoremap <leader>w :w<CR>
 "Abrir terminal con Ctrl+t
@@ -26,3 +26,9 @@ nnoremap <leader><BS> :bd<CR>
 nnoremap <leader>t :FZF<CR>
 " Abrir Rg busqueda con leader+F (leader+Shift+f)
 nnoremap <leader>F :Rg<CR>
+"-------- Vim Visual Multi -------------------------------------------
+" Selección con flechas, por defecto usa Ctrl+Up/Down, pero no funciona en
+" Kitty con split habilitado, entonces lo cambio a Alt+Up/Down
+let g:VM_maps = {}
+let g:VM_maps["Add Cursor Down"] = '<A-Down>'
+let g:VM_maps["Add Cursor Up"] = '<A-Up>'

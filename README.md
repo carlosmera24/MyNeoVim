@@ -209,7 +209,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 #### 11. vim-surround:
 
-[GitHub](https://github.com/tpope/vim-surround) Permite encapsular o encerrar palabras o selección en comillas, parentesis, llaves, etc, para su uso se debe seleccionar lo deseado -1 caracter  y luego `<leader> + caracter_deseado` 
+[GitHub](https://github.com/tpope/vim-surround) Permite encapsular o encerrar palabras o selección en comillas, parentesis, llaves, etc, para su uso se debe seleccionar lo deseado -1 caracter  y luego presionar `<leader>+S` y presionar el  `caracter_deseado` 
 
 #### 12. FZF-Vim:
 
@@ -355,6 +355,8 @@ sudo apt install fzf
 - Seleccionar palabas con `Ctrl-n` (Salir con `Ctrl-d` )
 
 - Crear cursores verticalmente `Ctrl-Down/Ctrl-Up`
+  
+  > Modificado a `Alt+Up/Down` ya que en Kitty no me funciona al utilizar split, pues ese atajo pertenece a otra función
 
 - Seleccionar un caracter a la vez `Shift-Arrows`
 
