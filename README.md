@@ -321,6 +321,14 @@ sudo apt install fzf
    > nvim
    > ```
 
+> **:CocUpdate** Permite mantener la configuración actualizada, sin embargo, en Mac, en ciertas ocasiones surgen errores, lo mejor sería eliminar la carpeta `~/.config/nvim/autoload` y ejecutar nuevamente:
+> 
+> ```shell
+> curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+> ```
+> 
+> De esta manera es posible actualizar Coc
+
 #### 16. EditorConfig-Vim:
 
 [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
