@@ -30,6 +30,8 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
    brew upgrade
    ```
 
+> En Mac con M1 se debe utilizar el comando `arch -x86_64 brew` de esa manera no se tendrán problemas o errores
+
 2. Instalar librerías python
    
    - **Linux:**            
