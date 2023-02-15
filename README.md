@@ -428,6 +428,25 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 > Nota: Generá lentitud al cargar archivos muy grandes, no he podido encontrar una forma de deshabilitarlo al inicio, por ahora lo dejo comentado, es decir, no instalado.
 
+#### 24. Telecope
+
+[GitHub](https://github.com/nvim-telescope/telescope.nvim) Instalado usando:
+
+```vim
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+```
+
+Configuración de comandos definido en `map.vim`
+
+- `<leader>ff ` Telescope find_files
+
+- `<leader>fg` Telescope live_grep
+
+- `<leader>fb` Telescope buffers
+
+- `<leader>fh` Telescope help_tags
+
 ### Temas
 
 1. **Nord Vim:** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)

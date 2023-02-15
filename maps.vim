@@ -15,6 +15,11 @@ nnoremap <C-e> :NERDTree<CR>
 " Cerrar Explorar NerdTree Shift+
 nnoremap <S-e> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+"-------- Telescope -------------------------------------------------
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 "-------- Bufer - Movimiento entre archivos abiertos ----------------
 " Siguiente archivo (:BNext) Shift+Tab
 nnoremap <S-Tab> :bn<CR>
