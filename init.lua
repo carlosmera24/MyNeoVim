@@ -2,13 +2,13 @@ vim.opt.syntax = "on"
 
 vim.opt.number = true --Numero de líenas
 vim.opt.title = true --Muestra el nombre del archivo en la ventana del terminal
---vim.opt.mouse = true --Habilita la integración del mouse para selección o mover
+vim.opt.mouse = 'a' --Habilita la integración del mouse para selección o mover
 
 vim.opt.wrap = false --No divide la line si el texto es muy grande
 vim.opt.cursorline = true --Resalta la linea actual
 vim.opt.colorcolumn = "120" --Muestra la columna límite a 120 caracteres
---Color de la columna anterior, aplic cuando se define el tema:
---vim.opt.highlight = "ColoColumn ctermbg=0 guibg=lightgrey"
+--Color de la columna limite de escritura
+vim.cmd 'highlight ColorColumn ctermbg=0 guibg=lightgrey'
 
 vim.opt.sw = 2 --Identación más pequeña
 vim.opt.smartindent = true --Al saltar tabula automaticamente en código
