@@ -7,6 +7,8 @@ let mapleader = " "
 nmap <C-F5> :source %<CR>
 "Guardar usando Leader+w
 nnoremap <leader>w :w<CR>
+"Salir usando Leader+q
+nnoremap <leader>q :q<CR>
 "Abrir terminal con Ctrl+t
 nnoremap <c-t> :vertical<CR>:ter<CR>
 "-------- NerdTree -------------------------------------------------
