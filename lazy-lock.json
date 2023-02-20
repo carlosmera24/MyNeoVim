@@ -1,4 +1,12 @@
 {
-  "lazy.nvim": { "branch": "main", "commit": "f2cc9ef6acc7367c001b7507c82cab3ab7c29cae" },
-  "nord-vim": { "branch": "main", "commit": "0748955e9e8d9770b44f2bec8456189430b37d9d" }
+  "fzf": { "branch": "master", "commit": "b1459c79cfc004dd7944f4db3ffb5a4ae20569ca" },
+  "lazy.nvim": { "branch": "main", "commit": "8077428e63feb0f3bf795d53b23ba1695b28ab0e" },
+  "lualine.nvim": { "branch": "master", "commit": "e99d733e0213ceb8f548ae6551b04ae32e590c80" },
+  "nerdtree": { "branch": "master", "commit": "fc85a6f07c2cd694be93496ffad75be126240068" },
+  "nerdtree-git-plugin": { "branch": "master", "commit": "e1fe727127a813095854a5b063c15e955a77eafb" },
+  "nord-vim": { "branch": "main", "commit": "0748955e9e8d9770b44f2bec8456189430b37d9d" },
+  "nvim-web-devicons": { "branch": "master", "commit": "4709a504d2cd2680fb511675e64ef2790d491d36" },
+  "vim-buftabline": { "branch": "master", "commit": "73b9ef5dcb6cdf6488bc88adb382f20bc3e3262a" },
+  "vim-devicons": { "branch": "master", "commit": "71f239af28b7214eebb60d4ea5bd040291fb7e33" },
+  "vim-nerdtree-syntax-highlight": { "branch": "master", "commit": "5178ee4d7f4e7761187df30bb709f703d91df18a" }
 }

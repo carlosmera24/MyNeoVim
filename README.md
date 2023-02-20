@@ -114,15 +114,15 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 |-- init.lua
 |-- lua
 |   |-- core
-|       |-- colorshceme.lua
+|       |-- lazy.lua
 |       |-- maps.lua
-|       |-- plugins-settings.lua
+|       |-- plugins
+|           |--... #Archivos .lua por plugin
 |       |-- settings.lua
-|-- plugin
 |-- README.md
 ```
 
-> Esta estructura la he definido para usar como gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim) ya que los mismos creadores de [Packer](https://github.com/wbthomason/packer.nvim) utilizan lazy en su contenido
+> Esta estructura la he definido para usar como gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim) ya que los mismos creadores de [Packer](https://github.com/wbthomason/packer.nvim) utilizan lazy en su contenido. La carpeta plugins contiene el requerimiento y configuración de cada plugin, así como los keys map para los mismos, lo que permite tener mayor organización y control.
 
 ## Plugins y temas
 

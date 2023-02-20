@@ -1,5 +1,4 @@
 return {
-  --Tema Nord
   {
     "arcticicestudio/nord-vim",
     lazy = false, --Cargar durante el inicio, ya que es un tema principal
