@@ -1,6 +1,14 @@
 # NeoVim
 
-Este repositorio tiene como objetivo tener un respaldo de configuración del editor [**NeoVim**](https://neovim.io/), el cual usa y mejor [**Vim**](https://www.vim.org/).
+Este repositorio tiene como objetivo tener un respaldo de configuración del editor [**NeoVim**](https://neovim.io/), el cual mejora a [**Vim**](https://www.vim.org/).
+
+## Ramas según configuración
+
+Para tener un mayor control y libertad de la configuración, así como el tipo y gestores de plugins, he creado ramas diferenciando su estructura:
+
+- `master`: Rama actual en uso principal
+
+- `migrate-lua`: Rama para la migración a lua, //TODO
 
 ## Instalación:
 
@@ -99,25 +107,28 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
 
 ## Configuración
 
-NeoVim utiliza la configuración en el archivo **init.vim**, el cual debe estar en la ruta _~/.config/nvim/init.vim_ para el caso de linux, este archivo contiene mi respaldo con la configuración que uso, entre ellos los plugins y temas. He separado la configuración en varios archivos que deben estar en la misma ruta:
+NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versión con **lua**, aunque utilizar archivos `.vim` es totalmente funcional. Está configuración debe estar en la ruta _~/.config/nvim/_  y la estructura es la siguiente:
 
-- *plugins.vim*: Listado de plugins a instalar
+```shell
+.
+|-- init.lua
+|-- lua
+|   |-- core
+|       |-- colorshceme.lua
+|       |-- maps.lua
+|       |-- plugins-settings.lua
+|       |-- settings.lua
+|-- plugin
+|-- README.md
+```
 
-- *plugin-config.vim*: Configuración propia de los temas
-
-- *maps.vim*: Atajos del teclado
+> Esta estructura la he definido para usar como gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim) ya que los mismos creadores de [Packer](https://github.com/wbthomason/packer.nvim) utilizan lazy en su contenido
 
 ## Plugins y temas
 
-Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Vim-Plug](https://github.com/junegunn/vim-plug) el cual permite definir los plugins a utilizar en el archivo de configuración de Vim y luego ejecutar dentro de Vim *:source %* y luego *:PlugInstall*.
+Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en `plugins-settings.lua`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos.
 
-**Mac:**
-
-```shell
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-### Plugins
+Plugins
 
 #### 1. indentLine:
 
@@ -430,7 +441,14 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 ### Temas
 
-1. **Nord Vim:** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+Los temas se pueden consultar en https://vimcolorschemes.com/
+
+1. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
+2. Iceberg  
+3. onedark
+4. atom-dark
+5. dracula
+6. VimHybrid
 
 ## Solución de Errores
 
