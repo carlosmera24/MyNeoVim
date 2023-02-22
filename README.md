@@ -118,6 +118,7 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 |       |-- maps.lua
 |       |-- plugins
 |           |--... #Archivos .lua por plugin
+|           |--plugins.lua #Definición de plugins sin configuración
 |       |-- settings.lua
 |-- README.md
 ```
@@ -126,11 +127,42 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 
 ## Plugins y temas
 
-Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en `plugins-settings.lua`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos.
+Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en la carpeta `plugins`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos y/o el inicio cuando se invoca un comando o tecla.
 
-Plugins
+### Lazy plugins configuración
 
-#### 1. indentLine:
+Dentro de las opciones que tenemos para configurar los plugins:
+
+1. Estrucutara:
+   
+   ```lua
+   return {
+       {
+           'nombre-plugin'    
+          -- Opciones del plugin 
+       } 
+   }
+   ```
+
+2. `branch` Define la rama del plugin a instalar.
+
+3. `dependencies` Array de las dependencias que utiliza el plugin
+
+4. `keys` Keys que permitirán inicar el plugin, adicionalmente definen las keys que usará el plugin
+
+5. `config` functión que define la configuración del tema:
+   
+   ```lua
+   config = function()
+       -- Configuración
+   end
+   ```
+
+6. `ft` Define los tipos de archivos para los cuales se auto iniciará el plugin (Lazy-load)
+
+### Plugins
+
+#### 1. IndentLine:
 
 [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
