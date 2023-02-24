@@ -33,6 +33,12 @@ opt.clipboard = "unnamedplus" --Integrar la copia con el portapapeles, alternati
 opt.encoding = "UTF-8" --Permitir caracteres especiales
 opt.spelllang = "en,es"  --Corregir palabras usando diccionarios en inglés y español
 
+-- Folding, activar como indent y permitir el uso manual para crear nuevos
+cmd([[
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'indent' | setlocal foldmethod=manual | endif
+]])
+
 -- Solucionar problemas con la sintaxis en arvhivos grandes
 --vim.opt.redrawtime = 10000
 --vim.opt.syntax = "sync fromstart"
