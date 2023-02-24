@@ -486,9 +486,9 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
   [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
 
-- `:ColorHighlight`: Resaltar colores
+- `:ColorHighlight`: Resaltar colores `<Alt+c>-h`
 
-- `:ColorClear`: Limpiar resaltado
+- `:ColorClear`: Limpiar resaltado `<Alt+c>-c` 
 
 - `:h colorizer`: Ayuda y más comandos
 

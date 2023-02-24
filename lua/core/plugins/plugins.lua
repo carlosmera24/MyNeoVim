@@ -19,8 +19,5 @@ return {
 
     --Selección de palabras
     'lfv89/vim-interestingwords',
-
-    -- Comentar 
-    { 'tpope/vim-commentary', dependencies = { 'suy/vim-context-commentstring' } },    
   }
 }
