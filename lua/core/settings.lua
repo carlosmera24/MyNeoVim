@@ -40,6 +40,6 @@ cmd([[
 ]])
 
 -- Solucionar problemas con la sintaxis en arvhivos grandes
---vim.opt.redrawtime = 10000
---vim.opt.syntax = "sync fromstart"
---vim.opt.re = 1
+opt.redrawtime = 10000
+cmd 'syntax sync fromstart'
+opt.re = 1
