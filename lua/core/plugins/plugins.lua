@@ -16,8 +16,5 @@ return {
 
     --git
     'airblade/vim-gitgutter',
-
-    --Selección de palabras
-    'lfv89/vim-interestingwords',
   }
 }
