@@ -1,6 +1,14 @@
 # NeoVim
 
-Este repositorio tiene como objetivo tener un respaldo de configuración del editor [**NeoVim**](https://neovim.io/), el cual usa y mejor [**Vim**](https://www.vim.org/).
+Este repositorio tiene como objetivo tener un respaldo de configuración del editor [**NeoVim**](https://neovim.io/), el cual mejora a [**Vim**](https://www.vim.org/).
+
+## Ramas según configuración
+
+Para tener un mayor control y libertad de la configuración, así como el tipo y gestores de plugins, he creado ramas diferenciando su estructura:
+
+- `master`: Rama actual en uso principal
+
+- `migrate-lua`: Rama para la migración a lua, //TODO
 
 ## Instalación:
 
@@ -16,6 +24,19 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
    
    ```shell
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+   
+   Instalación de **AppImage** como alternativa:
+   
+   ```shell
+   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+   chmod u+x nvim.appimage
+   ./nvim.appimage
+   #Luego agregar el comando globalmente, pues da error al ejecutar el comando nvim
+   ./nvim.appimage --appimage-extract
+   ./squashfs-root/AppRun --version
+   sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
+   nvim
    ```
    
    **Mac** Utilizamos el instalado de **Brew**, partiendo de él ejecutamos:
@@ -99,27 +120,62 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
 
 ## Configuración
 
-NeoVim utiliza la configuración en el archivo **init.vim**, el cual debe estar en la ruta _~/.config/nvim/init.vim_ para el caso de linux, este archivo contiene mi respaldo con la configuración que uso, entre ellos los plugins y temas. He separado la configuración en varios archivos que deben estar en la misma ruta:
+NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versión con **lua**, aunque utilizar archivos `.vim` es totalmente funcional. Está configuración debe estar en la ruta _~/.config/nvim/_  y la estructura es la siguiente:
 
-- *plugins.vim*: Listado de plugins a instalar
+```shell
+.
+|-- init.lua
+|-- lua
+|   |-- core
+|       |-- lazy.lua
+|       |-- maps.lua
+|       |-- plugins
+|           |--... #Archivos .lua por plugin
+|           |--plugins.lua #Definición de plugins sin configuración
+|       |-- settings.lua
+|-- README.md
+```
 
-- *plugin-config.vim*: Configuración propia de los temas
-
-- *maps.vim*: Atajos del teclado
+> Esta estructura la he definido para usar como gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim) ya que los mismos creadores de [Packer](https://github.com/wbthomason/packer.nvim) utilizan lazy en su contenido. La carpeta plugins contiene el requerimiento y configuración de cada plugin, así como los keys map para los mismos, lo que permite tener mayor organización y control.
 
 ## Plugins y temas
 
-Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Vim-Plug](https://github.com/junegunn/vim-plug) el cual permite definir los plugins a utilizar en el archivo de configuración de Vim y luego ejecutar dentro de Vim *:source %* y luego *:PlugInstall*.
+Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en la carpeta `plugins`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos y/o el inicio cuando se invoca un comando o tecla.
 
-**Mac:**
+### Lazy plugins configuración
 
-```shell
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
+Dentro de las opciones que tenemos para configurar los plugins:
+
+1. Estrucutara:
+   
+   ```lua
+   return {
+       {
+           'nombre-plugin'    
+          -- Opciones del plugin 
+       } 
+   }
+   ```
+
+2. `branch` Define la rama del plugin a instalar.
+
+3. `dependencies` Array de las dependencias que utiliza el plugin
+
+4. `keys` Keys que permitirán inicar el plugin, adicionalmente definen las keys que usará el plugin
+
+5. `config` functión que define la configuración del tema:
+   
+   ```lua
+   config = function()
+       -- Configuración
+   end
+   ```
+
+6. `ft` Define los tipos de archivos para los cuales se auto iniciará el plugin (Lazy-load)
 
 ### Plugins
 
-#### 1. indentLine:
+#### 1. IndentLine:
 
 [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
@@ -298,7 +354,32 @@ sudo apt install fzf
 
 #### 15. Coc:
 
-[Vim Awesome](https://vimawesome.com/plugin/coc-nvim) [GitHub](https://github.com/neoclide/coc.nvim) Utilizado para autocompletar código, es necesario instalar cada complemento por separado, es decir, para cada lenguaje de autocompletado que se desee se debe realizar la instalación, para ello, una vez se tenga instalado **Coc** bastará con ejecutar *:CocInstall [Nombre_Libreria]*, para instalar complementos de lenguaje basta con ejecutar *:CocInstall [paquete]*
+[Vim Awesome](https://vimawesome.com/plugin/coc-nvim) [GitHub](https://github.com/neoclide/coc.nvim) Utilizado para autocompletar código, es necesario instalar cada complemento por separado, es decir, para cada lenguaje de autocompletado que se desee se debe realizar la instalación, para ello se cuenta con la instalación manual o en mi caso instalación automática con Lua y Lazy
+
+##### Instalación Manual:
+
+ Una vez se tenga instalado **Coc** bastará con ejecutar *:CocInstall [Nombre_Libreria]*, para instalar complementos de lenguaje basta con ejecutar *:CocInstall [paquete]*. 
+
+##### Instalación automática con Lua/Lazy:
+
+Gracias a la fexibiliidad de **Lua** he automatizado la instalación de los paquetes agregando una opción en la configuración del plugin *lua/core/plugins/coc.lua* validando si no están instalados aún, de esa manera se instalarán la primera vez que se ejecute, cualquier paquete adicional basta con utilizar la validación de existencia  y agregar al comando. 
+
+```lua
+-- os.getenv("HOME") retorna el directorio home del usuario
+ local cocPath = os.getenv( "HOME" ) .. "/.config/coc/extensions/node_modules/"
+ if vim.loop.fs_stat(cocPath) then
+     local cocToInstall = ""
+     if not vim.loop.fs_stat( cocPath .. "coc-phpls" ) then
+         cocToInstall = "coc-phpls"
+     end
+     -- otras validaciones
+     if cocToInstall ~= "" then
+         vim.cmd('CocInstall ' .. cocToInstall)
+     end
+ end
+```
+
+##### Paquetes usados:
 
 1. **Coc-PHPLS:** [Vim Awesome](https://vimawesome.com/plugin/coc-phpls) [GitHub](https://github.com/marlonfan/coc-phpls)
 
@@ -306,22 +387,9 @@ sudo apt install fzf
 
 3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
 
-4. **Coc-Ventur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
+4. **Coc-Vetur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
 
 5. **Coc-CSS:** [Vim Awesome](https://vimawesome.com/plugin/coc-css) [GitHub](https://github.com/neoclide/coc-css) VueJS
-   
-   > **Nota:** Al no tener versiones actualizadas de **Neovim** se pueden generar problemas de compatibilidad con *Coc*, para ello opté en mi protatil con *Debian buster* instalar la versión de NeoVim utilizando AppImage, la documentación está en la página oficial, de esa manera logro tener la última versión y libre de errores:
-   > 
-   > ```shell
-   > curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-   > chmod u+x nvim.appimage
-   > ./nvim.appimage
-   > #Luego agregar el comando globalmente, pues da error al ejecutar el comando nvim
-   > ./nvim.appimage --appimage-extract
-   > ./squashfs-root/AppRun --version
-   > sudo mv squashfs-root / && sudo ln -s /squashfs-root/AppRun /usr/bin/nvim
-   > nvim
-   > ```
 
 > **:CocUpdate** Permite mantener la configuración actualizada, sin embargo, en Mac, en ciertas ocasiones surgen errores, lo mejor sería eliminar la carpeta `~/.config/nvim/autoload` y ejecutar nuevamente:
 > 
@@ -359,6 +427,12 @@ sudo apt install fzf
 [Vim Awesome](https://vimawesome.com/plugin/vim-interestingwords-safe-and-sound) [GitHub](https://github.com/lfv89/vim-interestingwords) Permite seleccionar palabras y sus ocurrencias en el texto, uso simpre, seleccionar palabra y presionar _<leader>+k_ para resaltar y _<leader>+K_ para eliminar el resaltado; y navegar entre las ocurrencias utilizando _<leader>+n_ y _<leader>+N_.
 
 #### 19. vim-visual-multi:
+
+> Dada la dificultad para configurar los keys/maps en Lazy, opto por usar directamente los comando de VIM:
+> 
+> - `Crtl+v` Activar seleción por lineas, una vez activado usar las felchas o `j` o `k` para desplazarse.
+> 
+> - `Shift+i` Activa la edición
 
 [GitHub](https://github.com/mg979/vim-visual-multi) Permite selección de multiples líenas, propicio para editar al mismo tiempo:
 
@@ -412,9 +486,9 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
   [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
 
-- `:ColorHighlight`: Resaltar colores
+- `:ColorHighlight`: Resaltar colores `<Alt+c>-h`
 
-- `:ColorClear`: Limpiar resaltado
+- `:ColorClear`: Limpiar resaltado `<Alt+c>-c` 
 
 - `:h colorizer`: Ayuda y más comandos
 
@@ -422,7 +496,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
   [GitHub](https://github.com/arnar/vim-matchopen) Resalta parentesis:
 
-- `:DoMatchLasOpen`: Hbilitar
+- `:DoMatchLasOpen`: Habilitar
 
 - `:NoMatchLastOpen`: Inhabilitar 
 
@@ -449,7 +523,14 @@ Configuración de comandos definido en `map.vim`
 
 ### Temas
 
-1. **Nord Vim:** [Vim Awesome]([Vim Awesome](https://vimawesome.com/plugin/nord-vim)) [GitHub](https://github.com/arcticicestudio/nord-vim)
+Los temas se pueden consultar en https://vimcolorschemes.com/
+
+1. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
+2. Iceberg  
+3. onedark
+4. atom-dark
+5. dracula
+6. VimHybrid
 
 ## Solución de Errores
 
