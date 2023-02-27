@@ -6,9 +6,9 @@ Este repositorio tiene como objetivo tener un respaldo de configuración del edi
 
 Para tener un mayor control y libertad de la configuración, así como el tipo y gestores de plugins, he creado ramas diferenciando su estructura:
 
-- `master`: Rama actual en uso principal
+- `master`: Rama actual en uso principal con `lua` `lazy`
 
-- `migrate-lua`: Rama para la migración a lua, //TODO
+- `vim-plug`: Rama con archivos `vim` y plugins `plug`. Es la copia de uso incial.
 
 ## Instalación:
 
