@@ -18,6 +18,8 @@ map('n', '<S-Tab>', ':bn<CR>', options)
 map('n', '<leader><Tab>', ':bp<CR>', options)
 -- Anterior Archivo (:BDelete) Leader+Backspace
 map('n', '<leader><BS>', ':bd<CR>', options)
+-- Abrir Explorador nativo con <Leader>E
+map('n', '<leader>E', ':Ex<CR>', options)
 -- -------- Vim Visual Multi -------------------------------------------
 -- Selección con flechas, por defecto usa Ctrl+Up/Down, pero no funciona en
 -- Kitty con split habilitado, entonces lo cambio a Alt+Up/Down
