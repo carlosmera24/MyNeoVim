@@ -27,15 +27,28 @@ return {
         manage_nvim_cmp = true,
         suggest_lsp_servers = false,
       })
+      lsp.setup()
 
-      -- Servers LSP
-      local servers = {
-        'lua_ls'
+      local mason = require("mason")
+      mason.setup()
+
+      local lspconfig = require("lspconfig")
+      local mason_servers = {}
+      local servers = require("core.plugins.lsp-zero.servers")
+
+      -- Verificar si el servidor esta instalado, sino lo agrega al listado para ser instalado
+       for server, _ in pairs(servers) do
+         local cmd = lspconfig[server].document_config.default_config.cmd[1]
+         if vim.fn.executable(cmd) == 0 then
+           table.insert(mason_servers, server)
+         end
+       end
+
+      local mason_lspconfig = require "mason-lspconfig"
+      mason_lspconfig.setup{
+        ensure_installed = mason_servers 
       }
 
-      -- lsp.ensure_installed(servers)
-
-      lsp.setup()
     end
   }
 }
