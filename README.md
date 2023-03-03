@@ -336,7 +336,7 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `servers.lua` definición de los servidores LSP que deseo que se instalen automáticamente al ejecutar Mason, los servidores diponibles se pueden listar en [nvim-lsp](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 
-- `:Mason` Me permite acceder al menú de control de los servidores LSP, instalar, actualizar, eliminar y listar.
+- `:Mason` Me permite acceder al menú de control de los servidores LSP, instalar, actualizar, eliminar y listar. Aunque al definir el archivo `servers` los servidores se instalan automáticamente en el inicio de nvim, preguntando si se dea instalar el listado.
 
 - Maps por default:
   
@@ -354,9 +354,9 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `<Ctrl-k>`: Muestra información de firma sobre el símbolo situado bajo el cursor en una ventana flotante.. Ver [:help vim.lsp.buf.signature_help()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.signature_help()). 
   
-  - `<F2>`: Cambia el nombre de todas las referencias al símbolo situado bajo el cursor. Ver [:help vim.lsp.buf.rename()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.rename()).
+  - `<F2>`: Cambia el nombre de todas las referencias al símbolo situado bajo el cursor. Ver [:help vim.lsp.buf.rename()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.rename()). TODO: Cambiar key, entra en conflicto con Kitty
   
-  - `<F4>`: Selecciona una acción de código disponible en la posición actual del cursor. Ver [:help vim.lsp.buf.code_action()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.code_action()).
+  - `<F4>`: Selecciona una acción de código disponible en la posición actual del cursor. Ver [:help vim.lsp.buf.code_action()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.code_action()).TODO: Cambiar key, entra en conflicto con Kitty
   
   - `gl`: Mostrar diagnósticos en una ventana flotante. Ver [:help vim.diagnostic.open_float()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.open_float()).
   
@@ -364,9 +364,7 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `]d`: Pasar al siguiente diagnóstico. Ver [:help vim.diagnostic.goto_next()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_next()).
 
-##### TODO:
-
-Estos plugins no están instalados de momento.  
+##### Plugins para sintaxis:
 
 1. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
 
@@ -396,7 +394,9 @@ Estos plugins no están instalados de momento.
 
 [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
-#### 17. Emmet.Vim:
+#### Emmet.Vim:
+
+> No utilizado lo reemplazo por servidor emmet-ls en LSP
 
 [Vim Awesome](https://vimawesome.com/plugin/emmet-vim) [GitHub](https://github.com/mattn/emmet-vim) Generación de código a partir de abreviaciones similar a [Emmet](https://emmet.io/), ejemplo:
 
@@ -415,11 +415,11 @@ Estos plugins no están instalados de momento.
   </div>
 ```
 
-#### 18. VIM-INTERESTINGWORDS:
+#### VIM-INTERESTINGWORDS:
 
 [Vim Awesome](https://vimawesome.com/plugin/vim-interestingwords-safe-and-sound) [GitHub](https://github.com/lfv89/vim-interestingwords) Permite seleccionar palabras y sus ocurrencias en el texto, uso simpre, seleccionar palabra y presionar _<leader>+k_ para resaltar y _<leader>+K_ para eliminar el resaltado; y navegar entre las ocurrencias utilizando _<leader>+n_ y _<leader>+N_.
 
-#### 19. vim-visual-multi:
+#### vim-visual-multi:
 
 > Dada la dificultad para configurar los keys/maps en Lazy, opto por usar directamente los comando de VIM:
 > 
@@ -449,7 +449,7 @@ Estos plugins no están instalados de momento.
 
 - Habilitar el uso del cursor agregar `let g:VM_mouse_mappings = 1` en el archivo de configuración, seleccionar con `Ctrl-Click` y salir con `Ctrl-Click derecho`
 
-#### 20. Comentarios con soporte para VUE/JS:
+#### Comentarios con soporte para VUE/JS:
 
 Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue posible activar el soporte para VUE, indagando me encontré una combinación de dos plugins, [vim-commentary](https://github.com/tpope/vim-commentary) y [vim-context-commentstring](https://github.com/suy/vim-context-commentstring), este ultimo agrega el soporte para VUE, los comandos son similares a los de **nvim-comment**:
 
@@ -457,7 +457,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - Comentar lineas arriba/abajo `gc{count}{motion}` donde *count* es el numero de lienas a comentar y *motion* la dirección (j|k|flechas).
 
-#### 21. Nvim Commnet:
+#### Nvim Commnet:
 
   `Reemplazado por "vim-comentary", ya que tiene soporte para VUE al instalar "vim-context-commentstring"` [GitHub](https://github.com/terrortylor/nvim-comment) Permite agregar comentario o commentar lineas de codigo:
 
@@ -475,7 +475,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - Descomenta un bloque `gcic` 
 
-#### 22. Colorizer:
+#### Colorizer:
 
   [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
 
@@ -485,7 +485,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - `:h colorizer`: Ayuda y más comandos
 
-#### 23. Vim-matchopen:
+#### Vim-matchopen:
 
   [GitHub](https://github.com/arnar/vim-matchopen) Resalta parentesis:
 
@@ -495,7 +495,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 > Nota: Generá lentitud al cargar archivos muy grandes, no he podido encontrar una forma de deshabilitarlo al inicio, por ahora lo dejo comentado, es decir, no instalado.
 
-#### 24. Telecope
+#### Telecope
 
 [GitHub](https://github.com/nvim-telescope/telescope.nvim) Instalado usando:
 
@@ -518,12 +518,13 @@ Configuración de comandos definido en `map.vim`
 
 Los temas se pueden consultar en https://vimcolorschemes.com/
 
-1. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
-2. Iceberg  
-3. onedark
-4. atom-dark
-5. dracula
-6. VimHybrid
+1. **Tokyo Night** 
+2. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
+3. Iceberg  
+4. onedark
+5. atom-dark
+6. dracula
+7. VimHybrid
 
 ## Solución de Errores
 

@@ -33,7 +33,7 @@ return {
     }
   end,
   ["jsonls"] = default,
-  ["marksman"] = default,
+  ["marksman"] = default,--markdown
   ["html"] = default,
   ["emmet_ls"] = function()
     local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -44,8 +44,10 @@ return {
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "blade", "vue" },
     }
   end,
-  ["tailwindcss"] = default,
-  ["tsserver"] = default,
+  ["svelte"] = default, --css, scss, less, js, html,
+  ["tailwindcss"] = default, --css
+  ["tsserver"] = default, -- js
+  ["volar"] = default, --vue
   ["phpactor"] = function()
     return {
       flags = lsp_flags,
