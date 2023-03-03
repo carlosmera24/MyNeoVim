@@ -320,7 +320,7 @@ sudo apt install fzf
    
    Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
-#### 13. Git:
+#### Git:
 
 1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive)  Integra comandos para el uso de git, además se integra muy bien con **Airline**
 
@@ -330,9 +330,41 @@ sudo apt install fzf
 
 Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim) ya que permite integrar de una manera muy sencilla LSP con mason, lspconfig y mason-slpconfig, de igual manera integra cmp y Snippets con LuaSnip. Hasta el momento es la manera más sencilla de integrar estas herramientas.
 
-##### TODO:
+- `lua/core/plugins/lsp/`: las especificaciones del plugin las defino en esta carpeta,
+  
+  - `init.lua` para definir los requerimientos a instalar y la configuración del plugin.
+  
+  - `servers.lua` definición de los servidores LSP que deseo que se instalen automáticamente al ejecutar Mason, los servidores diponibles se pueden listar en [nvim-lsp](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
 
-Configurar la instación de los servers desde mi configuración, creando un archivo servers, ajustar los maps para cmp, todo esto intentando usar la configuración de Ariel.
+- `:Mason` Me permite acceder al menú de control de los servidores LSP, instalar, actualizar, eliminar y listar.
+
+- Maps por default:
+  
+  - `K`:  Muestra información del simbolo en cursor. Ver [:help vim.lsp.buf.hover()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.hover()).
+  
+  - `gd`: Ir a la definición del simbolo en cursor. Ver [:help vim.lsp.buf.definition()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.definition()).
+  
+  - `gD`: Salta a la declaración. Algonos servidores no lo implementan esta función. Ver [:help vim.lsp.buf.declaration()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.declaration()).
+  
+  - `gi`: Lista todas las implementaciones para el símbolo bajo el cursor en la ventana quickfix. Ver [:help vim.lsp.buf.implementation()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.implementation()).
+  
+  - `go`: Salta a la definición del tipo del símbolo bajo el cursor. Ver [:help vim.lsp.buf.type_definition()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.type_definition()).
+  
+  - `gr`: Lista todas las referencias al símbolo bajo el cursor en la ventana quickfix. Ver [:help vim.lsp.buf.references()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.references()).
+  
+  - `<Ctrl-k>`: Muestra información de firma sobre el símbolo situado bajo el cursor en una ventana flotante.. Ver [:help vim.lsp.buf.signature_help()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.signature_help()). 
+  
+  - `<F2>`: Cambia el nombre de todas las referencias al símbolo situado bajo el cursor. Ver [:help vim.lsp.buf.rename()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.rename()).
+  
+  - `<F4>`: Selecciona una acción de código disponible en la posición actual del cursor. Ver [:help vim.lsp.buf.code_action()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.code_action()).
+  
+  - `gl`: Mostrar diagnósticos en una ventana flotante. Ver [:help vim.diagnostic.open_float()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.open_float()).
+  
+  - `[d`: Pasar al diagnóstico anterior en la memoria intermedia actual. Ver [:help vim.diagnostic.goto_prev()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_prev()).
+  
+  - `]d`: Pasar al siguiente diagnóstico. Ver [:help vim.diagnostic.goto_next()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_next()).
+
+##### TODO:
 
 Estos plugins no están instalados de momento.  
 
@@ -359,8 +391,6 @@ Estos plugins no están instalados de momento.
    > Para mayor información se puede consultar la documentación oficial
 
 9. 
-
-#### 
 
 #### 16. EditorConfig-Vim:
 
