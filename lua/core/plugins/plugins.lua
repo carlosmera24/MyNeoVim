@@ -2,7 +2,7 @@ return {
   {
     -- Typing
     'jiangmiao/auto-pairs',
-    'alvan/vim-closetag', 
+    'alvan/vim-closetag',
 
     --Syntaxis
     { 'posva/vim-vue', ft = "vue" },
@@ -12,7 +12,6 @@ return {
     { 'pangloss/vim-javascript', ft = { "js", "vue" } },
     { 'StanAngeloff/php.vim', ft = { "php", "blade" } },
     'sheerun/vim-polyglot',
-    { 'mattn/emmet-vim', ft = { 'php', 'javascript', 'html', 'blade', 'vue' } },
 
     --git
     'airblade/vim-gitgutter',

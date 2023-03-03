@@ -175,21 +175,21 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 ### Plugins
 
-#### 1. IndentLine:
+#### IndentLine:
 
 [Vim Awesome](https://vimawesome.com/plugin/indentline) [GitHub](https://github.com/yggdroot/indentline) Permite visualizar las indentaciones presentes en el archivo.
 
-#### 2. LuaLine:
+#### LuaLine:
 
 [GitHub ](https://github.com/nvim-lualine/lualine.nvim). Bara de estado optimizada, según recomendaciones en la web, es más ligero, pasa a reemplazar **Vim AirLine**   
 
 > Importante instalar primero el plugin con PlugInstall/PlugUpdate y luego habilitar la configuración para evitar errores.
 
-#### 3. BufTabLine:
+#### BufTabLine:
 
 [GitHub](https://github.com/ap/vim-buftabline) [Vim Awesome](https://vimawesome.com/plugin/buftabline) Tras no usar *Vim AirLine* es necesario tener otro tab para mostrar los buffers activos, esta funcionalidad la permite este plugin, sencillo y práctico, para iniciar solo basta con la instalación
 
-#### 4. Vim Airline:
+#### Vim Airline:
 
 [Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
 
@@ -225,11 +225,11 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 - La integración con Git solo está disponible al instalar los plugins fugitive.vim, gina.vim, lawrencium, vcscommand.
 
-#### 5. Nerd Tree:
+#### Nerd Tree:
 
 [Vim Awesome](https://vimawesome.com/plugin/nerdtree-red) [GitHub](https://github.com/preservim/nerdtree) Permite tener un árbol de directorios para explorar el proyecto o carpetas. En la documentación se recomiendan algunos comandos a configurar para no tener que ejecutar comandos como *:NERDTree, :NERDTreeFind, NERDTreeToggle* entre otros, de igual manera recomienda otros plugins y configuraciones que podemos aplicar de acuerdo a nuestros gustos y necesidades.
 
-#### 6. Vim-Devicons:
+#### Vim-Devicons:
 
 [Vim Awesome](https://vimawesome.com/plugin/vim-devicons) [GitHub](https://github.com/ryanoasis/vim-devicons) Integración de iconos para NerdTree. Para su instalación es necesario instalar una fuente compatible, yo utilizo la opción 6 en la doucmentación [GitHub - ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation), para Linux:
 
@@ -249,27 +249,27 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 > Recomendable usasr iTerm2 y en el perfil usar una fuente diferente para Non-ASCII y seleccionar *DroidSansMono  Nerd Font* y actuar el uso de ligaduras.s
 
-#### 7. Nerd-Tree-Git-Plugin:
+#### Nerd-Tree-Git-Plugin:
 
 [Vim Awesome](https://vimawesome.com/plugin/nerdtree-git-plugin) [GitHub](https://github.com/xuyuanp/nerdtree-git-plugin) Permite identificar los cambios en los archivos para Git en NerdTree.
 
-#### 8. Vim-NerdTree-Syntax-Highlight:
+#### Vim-NerdTree-Syntax-Highlight:
 
 [Vim Awesome](https://vimawesome.com/plugin/vim-nerdtree-syntax-highlight) [GitHub](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) Resalta en diferentes colores los iconos de los tipos de archivos, trabaja en conjunto con **Vim-Devicons**
 
-#### 9. Auto-Pairs:
+#### Auto-Pairs:
 
 [Vim Awesome](https://vimawesome.com/plugin/auto-pairs) [GitHub](https://github.com/jiangmiao/auto-pairs) Autocompleta comillas, llaves, parentesis, etc, muy util.
 
-#### 10. vim-closetag:
+#### vim-closetag:
 
 [GitHub](https://github.com/alvan/vim-closetag) Cierra etiquetas automáticamente.
 
-#### 11. vim-surround:
+#### vim-surround:
 
 [GitHub](https://github.com/tpope/vim-surround) Permite encapsular o encerrar palabras o selección en comillas, parentesis, llaves, etc, para su uso se debe seleccionar lo deseado -1 caracter  y luego presionar `<leader>+S` y presionar el  `caracter_deseado` 
 
-#### 12. FZF-Vim:
+#### FZF-Vim:
 
 [Vim Awesome](https://vimawesome.com/plugin/fzf-vim) [GitHub](https://github.com/junegunn/fzf.vim) Integra funcionalidades para realizar busqueda de archivos con el complemento para terminal **FZF** ([Vim Awesome](https://vimawesome.com/plugin/fzf) [GitHub](https://github.com/junegunn/fzf)). Según la documentación encontrada, FZF es un buscador de archivos para terminales muy rápido y versatil, para instalarlo en Vim es necesario primero realizar la instalación en el sistema de la siguiente manera:
 
@@ -320,13 +320,51 @@ sudo apt install fzf
    
    Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
-#### 13. Git:
+#### Git:
 
 1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive)  Integra comandos para el uso de git, además se integra muy bien con **Airline**
 
 2. **vim-gitgutter:** [Vim Awesome](https://vimawesome.com/plugin/vim-gitgutter) [GitHub](https://github.com/airblade/vim-gitgutter) Resalta dentro de los archivos los cambios realizados.
 
-#### 14. Sintanxis:
+#### Sintanxis Y Completado LSP:
+
+Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.nvim](https://github.com/VonHeikemen/lsp-zero.nvim) ya que permite integrar de una manera muy sencilla LSP con mason, lspconfig y mason-slpconfig, de igual manera integra cmp y Snippets con LuaSnip. Hasta el momento es la manera más sencilla de integrar estas herramientas.
+
+- `lua/core/plugins/lsp/`: las especificaciones del plugin las defino en esta carpeta,
+  
+  - `init.lua` para definir los requerimientos a instalar y la configuración del plugin.
+  
+  - `servers.lua` definición de los servidores LSP que deseo que se instalen automáticamente al ejecutar Mason, los servidores diponibles se pueden listar en [nvim-lsp](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+
+- `:Mason` Me permite acceder al menú de control de los servidores LSP, instalar, actualizar, eliminar y listar. Aunque al definir el archivo `servers` los servidores se instalan automáticamente en el inicio de nvim, preguntando si se dea instalar el listado.
+
+- Maps por default:
+  
+  - `K`:  Muestra información del simbolo en cursor. Ver [:help vim.lsp.buf.hover()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.hover()).
+  
+  - `gd`: Ir a la definición del simbolo en cursor. Ver [:help vim.lsp.buf.definition()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.definition()).
+  
+  - `gD`: Salta a la declaración. Algonos servidores no lo implementan esta función. Ver [:help vim.lsp.buf.declaration()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.declaration()).
+  
+  - `gi`: Lista todas las implementaciones para el símbolo bajo el cursor en la ventana quickfix. Ver [:help vim.lsp.buf.implementation()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.implementation()).
+  
+  - `go`: Salta a la definición del tipo del símbolo bajo el cursor. Ver [:help vim.lsp.buf.type_definition()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.type_definition()).
+  
+  - `gr`: Lista todas las referencias al símbolo bajo el cursor en la ventana quickfix. Ver [:help vim.lsp.buf.references()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.references()).
+  
+  - `<Ctrl-k>`: Muestra información de firma sobre el símbolo situado bajo el cursor en una ventana flotante.. Ver [:help vim.lsp.buf.signature_help()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.signature_help()). 
+  
+  - `<F2>`: Cambia el nombre de todas las referencias al símbolo situado bajo el cursor. Ver [:help vim.lsp.buf.rename()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.rename()). TODO: Cambiar key, entra en conflicto con Kitty
+  
+  - `<F4>`: Selecciona una acción de código disponible en la posición actual del cursor. Ver [:help vim.lsp.buf.code_action()](https://neovim.io/doc/user/lsp.html#vim.lsp.buf.code_action()).TODO: Cambiar key, entra en conflicto con Kitty
+  
+  - `gl`: Mostrar diagnósticos en una ventana flotante. Ver [:help vim.diagnostic.open_float()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.open_float()).
+  
+  - `[d`: Pasar al diagnóstico anterior en la memoria intermedia actual. Ver [:help vim.diagnostic.goto_prev()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_prev()).
+  
+  - `]d`: Pasar al siguiente diagnóstico. Ver [:help vim.diagnostic.goto_next()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_next()).
+
+##### Plugins para sintaxis:
 
 1. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
 
@@ -352,58 +390,13 @@ sudo apt install fzf
 
 9. 
 
-#### 15. Coc:
-
-[Vim Awesome](https://vimawesome.com/plugin/coc-nvim) [GitHub](https://github.com/neoclide/coc.nvim) Utilizado para autocompletar código, es necesario instalar cada complemento por separado, es decir, para cada lenguaje de autocompletado que se desee se debe realizar la instalación, para ello se cuenta con la instalación manual o en mi caso instalación automática con Lua y Lazy
-
-##### Instalación Manual:
-
- Una vez se tenga instalado **Coc** bastará con ejecutar *:CocInstall [Nombre_Libreria]*, para instalar complementos de lenguaje basta con ejecutar *:CocInstall [paquete]*. 
-
-##### Instalación automática con Lua/Lazy:
-
-Gracias a la fexibiliidad de **Lua** he automatizado la instalación de los paquetes agregando una opción en la configuración del plugin *lua/core/plugins/coc.lua* validando si no están instalados aún, de esa manera se instalarán la primera vez que se ejecute, cualquier paquete adicional basta con utilizar la validación de existencia  y agregar al comando. 
-
-```lua
--- os.getenv("HOME") retorna el directorio home del usuario
- local cocPath = os.getenv( "HOME" ) .. "/.config/coc/extensions/node_modules/"
- if vim.loop.fs_stat(cocPath) then
-     local cocToInstall = ""
-     if not vim.loop.fs_stat( cocPath .. "coc-phpls" ) then
-         cocToInstall = "coc-phpls"
-     end
-     -- otras validaciones
-     if cocToInstall ~= "" then
-         vim.cmd('CocInstall ' .. cocToInstall)
-     end
- end
-```
-
-##### Paquetes usados:
-
-1. **Coc-PHPLS:** [Vim Awesome](https://vimawesome.com/plugin/coc-phpls) [GitHub](https://github.com/marlonfan/coc-phpls)
-
-2. **Coc-Eslint**: [Vim Awesome](https://vimawesome.com/plugin/coc-eslint) [GitHub](https://github.com/neoclide/coc-eslint) 
-
-3. **Coc-TSServer:** [Vim Awesome](https://vimawesome.com/plugin/coc-tsserver) [GitHub](https://github.com/neoclide/coc-tsserver)
-
-4. **Coc-Vetur:** [Vim Awesome](https://vimawesome.com/plugin/coc-vetur) [GitHub](https://github.com/neoclide/coc-vetur) VueJS
-
-5. **Coc-CSS:** [Vim Awesome](https://vimawesome.com/plugin/coc-css) [GitHub](https://github.com/neoclide/coc-css) VueJS
-
-> **:CocUpdate** Permite mantener la configuración actualizada, sin embargo, en Mac, en ciertas ocasiones surgen errores, lo mejor sería eliminar la carpeta `~/.config/nvim/autoload` y ejecutar nuevamente:
-> 
-> ```shell
-> curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-> ```
-> 
-> De esta manera es posible actualizar Coc
-
 #### 16. EditorConfig-Vim:
 
 [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
-#### 17. Emmet.Vim:
+#### Emmet.Vim:
+
+> No utilizado lo reemplazo por servidor emmet-ls en LSP
 
 [Vim Awesome](https://vimawesome.com/plugin/emmet-vim) [GitHub](https://github.com/mattn/emmet-vim) Generación de código a partir de abreviaciones similar a [Emmet](https://emmet.io/), ejemplo:
 
@@ -422,11 +415,11 @@ Gracias a la fexibiliidad de **Lua** he automatizado la instalación de los paqu
   </div>
 ```
 
-#### 18. VIM-INTERESTINGWORDS:
+#### VIM-INTERESTINGWORDS:
 
 [Vim Awesome](https://vimawesome.com/plugin/vim-interestingwords-safe-and-sound) [GitHub](https://github.com/lfv89/vim-interestingwords) Permite seleccionar palabras y sus ocurrencias en el texto, uso simpre, seleccionar palabra y presionar _<leader>+k_ para resaltar y _<leader>+K_ para eliminar el resaltado; y navegar entre las ocurrencias utilizando _<leader>+n_ y _<leader>+N_.
 
-#### 19. vim-visual-multi:
+#### vim-visual-multi:
 
 > Dada la dificultad para configurar los keys/maps en Lazy, opto por usar directamente los comando de VIM:
 > 
@@ -456,7 +449,7 @@ Gracias a la fexibiliidad de **Lua** he automatizado la instalación de los paqu
 
 - Habilitar el uso del cursor agregar `let g:VM_mouse_mappings = 1` en el archivo de configuración, seleccionar con `Ctrl-Click` y salir con `Ctrl-Click derecho`
 
-#### 20. Comentarios con soporte para VUE/JS:
+#### Comentarios con soporte para VUE/JS:
 
 Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue posible activar el soporte para VUE, indagando me encontré una combinación de dos plugins, [vim-commentary](https://github.com/tpope/vim-commentary) y [vim-context-commentstring](https://github.com/suy/vim-context-commentstring), este ultimo agrega el soporte para VUE, los comandos son similares a los de **nvim-comment**:
 
@@ -464,7 +457,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - Comentar lineas arriba/abajo `gc{count}{motion}` donde *count* es el numero de lienas a comentar y *motion* la dirección (j|k|flechas).
 
-#### 21. Nvim Commnet:
+#### Nvim Commnet:
 
   `Reemplazado por "vim-comentary", ya que tiene soporte para VUE al instalar "vim-context-commentstring"` [GitHub](https://github.com/terrortylor/nvim-comment) Permite agregar comentario o commentar lineas de codigo:
 
@@ -482,7 +475,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - Descomenta un bloque `gcic` 
 
-#### 22. Colorizer:
+#### Colorizer:
 
   [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
 
@@ -492,7 +485,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - `:h colorizer`: Ayuda y más comandos
 
-#### 23. Vim-matchopen:
+#### Vim-matchopen:
 
   [GitHub](https://github.com/arnar/vim-matchopen) Resalta parentesis:
 
@@ -502,7 +495,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 > Nota: Generá lentitud al cargar archivos muy grandes, no he podido encontrar una forma de deshabilitarlo al inicio, por ahora lo dejo comentado, es decir, no instalado.
 
-#### 24. Telecope
+#### Telecope
 
 [GitHub](https://github.com/nvim-telescope/telescope.nvim) Instalado usando:
 
@@ -525,12 +518,13 @@ Configuración de comandos definido en `map.vim`
 
 Los temas se pueden consultar en https://vimcolorschemes.com/
 
-1. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
-2. Iceberg  
-3. onedark
-4. atom-dark
-5. dracula
-6. VimHybrid
+1. **Tokyo Night** 
+2. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
+3. Iceberg  
+4. onedark
+5. atom-dark
+6. dracula
+7. VimHybrid
 
 ## Solución de Errores
 
