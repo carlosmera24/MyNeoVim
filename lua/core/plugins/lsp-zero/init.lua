@@ -46,9 +46,8 @@ return {
 
       local mason_lspconfig = require "mason-lspconfig"
       mason_lspconfig.setup{
-        ensure_installed = mason_servers 
+        ensure_installed = mason_servers
       }
-
     end
   }
 }

@@ -225,7 +225,23 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 - La integración con Git solo está disponible al instalar los plugins fugitive.vim, gina.vim, lawrencium, vcscommand.
 
+#### NVIM-TREE
+
+[GitHub](https://github.com/nvim-tree/nvim-tree.lua) Reemplazando Nerd-Tree, de igual manera permite tener un arbol de directorios y archivos para explorar el poryecto actual, escrito en Lua.
+
+-  `g?` permite listar las opciones sobre el archivo o directorio
+
+- `<leader>e`: `:NvimTreeFocus`
+
+- `<Ctrl-e>`: `NvimTreeToggle` Abrir/Cerrar Explorador
+
+- `<Ctrl-f>`: `:NvimTreeFindFile` Ubica el archivo abierto en el explorador
+
+- `<Alt-e>`: `:NvimTreeCollapse` Collapsa o recoge recursivamente todos los directorios.
+
 #### Nerd Tree:
+
+> Usnado NVIM-Tree
 
 [Vim Awesome](https://vimawesome.com/plugin/nerdtree-red) [GitHub](https://github.com/preservim/nerdtree) Permite tener un árbol de directorios para explorar el proyecto o carpetas. En la documentación se recomiendan algunos comandos a configurar para no tener que ejecutar comandos como *:NERDTree, :NERDTreeFind, NERDTreeToggle* entre otros, de igual manera recomienda otros plugins y configuraciones que podemos aplicar de acuerdo a nuestros gustos y necesidades.
 
