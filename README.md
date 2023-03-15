@@ -229,7 +229,7 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 [GitHub](https://github.com/nvim-tree/nvim-tree.lua) Reemplazando Nerd-Tree, de igual manera permite tener un arbol de directorios y archivos para explorar el poryecto actual, escrito en Lua.
 
--  `g?` permite listar las opciones sobre el archivo o directorio
+- `g?` permite listar las opciones sobre el archivo o directorio
 
 - `<leader>e`: `:NvimTreeFocus`
 
@@ -406,7 +406,9 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
 
 9. 
 
-#### 16. EditorConfig-Vim:
+#### EditorConfig-Vim:
+
+> De momento no está siendo utilizado -No instalado-
 
 [Vim Awesome](https://vimawesome.com/plugin/editorconfig-vim) [GitHub](https://github.com/editorconfig/editorconfig-vim) Este complemento permite ingrar la configuración del editor como identación y tabulado importando configuración de [EditorConfig](https://editorconfig.org/) para lo cual se requiere crear el arcvhio *.editorconfig* en la raíz del proyecto.
 
