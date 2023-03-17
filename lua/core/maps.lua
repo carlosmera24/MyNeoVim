@@ -20,9 +20,3 @@ map('n', '<leader><Tab>', ':bp<CR>', options)
 map('n', '<leader><BS>', ':bd<CR>', options)
 -- Abrir Explorador nativo con <Leader>E
 map('n', '<leader>E', ':Ex<CR>', options)
--- -------- Vim Visual Multi -------------------------------------------
--- Selección con flechas, por defecto usa Ctrl+Up/Down, pero no funciona en
--- Kitty con split habilitado, entonces lo cambio a Alt+Up/Down
---let g:VM_maps = {}
---let g:VM_maps["Add Cursor Down"] = '<A-Down>'
---let g:VM_maps["Add Cursor Up"] = '<A-Up>'

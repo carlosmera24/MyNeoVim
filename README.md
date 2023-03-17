@@ -138,9 +138,17 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 
 > Esta estructura la he definido para usar como gestor de paquetes [Lazy](https://github.com/folke/lazy.nvim) ya que los mismos creadores de [Packer](https://github.com/wbthomason/packer.nvim) utilizan lazy en su contenido. La carpeta plugins contiene el requerimiento y configuración de cada plugin, así como los keys map para los mismos, lo que permite tener mayor organización y control.
 
+## Paginas y recuersos
+
+1. [VimAwesome](https://vimawesome.com/): Plugins.
+
+2. [Neovimcraft](https://neovimcraft.com/): Plugins, Temas.
+
+3. [This week in neovim](https://this-week-in-neovim.org/): Recopilación de noticias, actualizaciones, nuevos temas, entre otros datos de interes.
+
 ## Plugins y temas
 
-Los plugins los he tomado de la página [VimAwesome](https://vimawesome.com/) y enlazaré los links respectivos y su respositorio en GitHub. Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en la carpeta `plugins`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos y/o el inicio cuando se invoca un comando o tecla.
+Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en la carpeta `plugins`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos y/o el inicio cuando se invoca un comando o tecla.
 
 ### Lazy plugins configuración
 
@@ -338,7 +346,7 @@ sudo apt install fzf
 
 #### Git:
 
-1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive)  Integra comandos para el uso de git, además se integra muy bien con **Airline**
+1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive) Integra comandos para el uso de git, además se integra muy bien con **Airline**, se puede invocar utilizando `:G` o `:Git` para visualizar el estado e información del proyecto actual, a su vez se complementa con todos los comandos de git, ejemplo: `:G status`.
 
 2. **vim-gitgutter:** [Vim Awesome](https://vimawesome.com/plugin/vim-gitgutter) [GitHub](https://github.com/airblade/vim-gitgutter) Resalta dentro de los archivos los cambios realizados.
 
