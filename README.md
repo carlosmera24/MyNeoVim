@@ -344,7 +344,7 @@ sudo apt install fzf
    
    Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
-#### Git:
+#### Git
 
 1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive) Integra comandos para el uso de git, además se integra muy bien con **Airline**, se puede invocar utilizando `:G` o `:Git` para visualizar el estado e información del proyecto actual, a su vez se complementa con todos los comandos de git, ejemplo: `:G status`.
 
