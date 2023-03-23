@@ -48,6 +48,7 @@ return {
   ["tailwindcss"] = default, --css
   ["tsserver"] = default, -- js
   ["volar"] = default, --vue
+  ["intelephense"] = default, -- php
   ["phpactor"] = function()
     return {
       flags = lsp_flags,

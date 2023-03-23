@@ -199,7 +199,7 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 #### Vim Airline:
 
-[Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub - vim-airline/vim-airline-themes: A collection of themes for vim-airline](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
+[Vim Awesome](https://vimawesome.com/plugin/vim-airline-superman) [GitHub](https://github.com/vim-airline/vim-airline) Modifica la visualización de la barra inferior, puede instalarse vim-airline-themes [Vim Awesome](https://vimawesome.com/plugin/vim-airline-themes) [GitHub](https://github.com/vim-airline/vim-airline-themes) para ampliar la posibilidad de temas.
 
 **Ajuste de fuentes**: Para que visualice correctamente con > en la información, es necesario instalar la fuente power line:
 
