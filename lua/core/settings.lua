@@ -19,10 +19,11 @@ opt.numberwidth = 1 --Tamaño del numero de líneas
 opt.swapfile = false --Evitar errores con algunos archivos referentes al archivo swap
 opt.backup = false --Sin copia de seguridad
 
--- Indentación a 2 espacios
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
+-- Indentación a 4 espacios, ya que es la más usada
+-- preferiblemete me gusta a 2 espacios
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.softtabstop = 4
 opt.shiftround = true
 opt.expandtab = true --Insertar espacios en lugar de <Tab>s
 
