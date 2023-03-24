@@ -388,7 +388,25 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `]d`: Pasar al siguiente diagnóstico. Ver [:help vim.diagnostic.goto_next()](https://neovim.io/doc/user/diagnostic.html#vim.diagnostic.goto_next()).
 
-##### Plugins para sintaxis:
+##### Sintaxis con treesitter
+
+[Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Permite inegrar el resaltado de sintaxis implementando [Treesitter](https://tree-sitter.github.io/tree-sitter/). Este plugin permite ir anexando los lenguajes que se quieren tener e incluso excluir, todo está en su documentación oficial, toda la configuración la he definido en el archivo `plugins/treesitter.lua`
+
+- El listado de lenguajes se definen en la variable u opción `ensure_installed`.
+
+- Keys map:
+  
+  - `Ctrl+space`: Incrementar/Iniciar selección
+  
+  - `Backspace`: Decementar selección
+
+###### Comentarios
+
+Para integrar correctamente los comentarios, en conjunto con **vim-commentary** se instala [nvim-ts-context-comentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring), definido y configurado en el mismo archivo del plugin (`plugins/treesitter.lua`), esto añade soporte para VUE de manera correcta.
+
+##### Plugins para sintaxis
+
+> Reemplazados por treesitter
 
 1. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
 
@@ -475,7 +493,9 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
 
 - Habilitar el uso del cursor agregar `let g:VM_mouse_mappings = 1` en el archivo de configuración, seleccionar con `Ctrl-Click` y salir con `Ctrl-Click derecho`
 
-#### Comentarios con soporte para VUE/JS:
+#### Comentarios
+
+##### con soporte para VUE/JS:
 
 Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue posible activar el soporte para VUE, indagando me encontré una combinación de dos plugins, [vim-commentary](https://github.com/tpope/vim-commentary) y [vim-context-commentstring](https://github.com/suy/vim-context-commentstring), este ultimo agrega el soporte para VUE, los comandos son similares a los de **nvim-comment**:
 
@@ -483,7 +503,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 - Comentar lineas arriba/abajo `gc{count}{motion}` donde *count* es el numero de lienas a comentar y *motion* la dirección (j|k|flechas).
 
-#### Nvim Commnet:
+##### Nvim Commnet:
 
   `Reemplazado por "vim-comentary", ya que tiene soporte para VUE al instalar "vim-context-commentstring"` [GitHub](https://github.com/terrortylor/nvim-comment) Permite agregar comentario o commentar lineas de codigo:
 
