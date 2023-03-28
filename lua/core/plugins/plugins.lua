@@ -5,7 +5,7 @@ return {
 
   --Syntaxis
   -- { 'posva/vim-vue', ft = "vue" },
-  -- { 'jwalton512/vim-blade', ft = "blade" },
+  { 'jwalton512/vim-blade', ft = "blade" },
   -- { 'noahfrederick/vim-laravel', ft = { "php", "blade" } },
   -- { 'leafgarland/typescript-vim', ft = { "js", "vue" } },
   -- { 'pangloss/vim-javascript', ft = { "js", "vue" } },

@@ -400,13 +400,15 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `Backspace`: Decementar selección
 
+> Para `blade` (Laravel) no hay un soporte directo, por lo que me es necesario usar un plugin adicional, **vim-blade**.
+
 ###### Comentarios
 
 Para integrar correctamente los comentarios, en conjunto con **vim-commentary** se instala [nvim-ts-context-comentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring), definido y configurado en el mismo archivo del plugin (`plugins/treesitter.lua`), esto añade soporte para VUE de manera correcta.
 
 ##### Plugins para sintaxis
 
-> Reemplazados por treesitter
+> Reemplazados por treesitter, excepto **vim-blade** ya que no hay un soporte official o de terceros para treesitter
 
 1. **Vim-Vue:** [Vim Awesome](https://vimawesome.com/plugin/vim-vue-fearless) [GitHub](https://github.com/posva/vim-vue) 
 
