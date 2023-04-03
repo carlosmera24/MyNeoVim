@@ -25,6 +25,8 @@ return {
         enable_autocmd = false,
       },
       ensure_installed = {
+        -- c, lua, vim son parte de la funcionalidad de neovim, requeridos e indispensables
+        "c",
         "css",
         "html",
         "javascript",
@@ -34,6 +36,7 @@ return {
         "php",
         "scss",
         "typescript",
+        "vim",
         "vue",
       },
       incremental_selection = {

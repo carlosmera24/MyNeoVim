@@ -392,7 +392,7 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
 
 [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) Permite inegrar el resaltado de sintaxis implementando [Treesitter](https://tree-sitter.github.io/tree-sitter/). Este plugin permite ir anexando los lenguajes que se quieren tener e incluso excluir, todo está en su documentación oficial, toda la configuración la he definido en el archivo `plugins/treesitter.lua`
 
-- El listado de lenguajes se definen en la variable u opción `ensure_installed`.
+- El listado de lenguajes se definen en la variable u opción `ensure_installed`, los leguajes requeridos para el funcionamiento de nvim son `c`, `lua`,`vim`
 
 - Keys map:
   
