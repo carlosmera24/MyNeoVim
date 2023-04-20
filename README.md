@@ -404,7 +404,9 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
 
 ###### Comentarios
 
-Para integrar correctamente los comentarios, en conjunto con **vim-commentary** se instala [nvim-ts-context-comentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring), definido y configurado en el mismo archivo del plugin (`plugins/treesitter.lua`), esto añade soporte para VUE de manera correcta.
+> Con el cambio de `vim-commentary` a `Comment` no veo necesario el uso del plugin `nvim-ts-context-commentstring`, ya que `Comment` integró coporte para `treesitter`, sin embargo opto por dejarlo como una dependencia por si necesito realizar algún caso de uso avanzado, aunque hasta el momento me funciona con `vue` perfectamente.
+
+Para integrar correctamente los comentarios, en conjunto con **vim-commentary** se instala [nvim-ts-context-comentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring), definido y configurado en el mismo archivo del plugin (`plugins/treesitter.lua`), esto añade soporte para VUE de manera correcta
 
 ##### Plugins para sintaxis
 
@@ -497,7 +499,33 @@ Para integrar correctamente los comentarios, en conjunto con **vim-commentary** 
 
 #### Comentarios
 
-##### con soporte para VUE/JS:
+##### Comment
+
+> Plugin actualmente utilizado en compatibilidad con `Vue` y `Treesitter`
+
+[GitHub](https://github.com/numToStr/Comment.nvim) pase a reemplazar los plugins `vim-commentary` y `vim-context-commentstring` ya que no me daban buena compatibilidad con `vue` implementando `treesitter`. Los comandos o atajos del teclado son similares a los otros plugins:
+
+- Modo normal:
+  
+  - `gcc` - Toggles the current line using linewise comment
+  
+  - `gbc` - Toggles the current line using blockwise comment
+  
+  - `[count]gcc` - Toggles the number of line given as a prefix-count using linewise
+  
+  - `[count]gbc` - Toggles the number of line given as a prefix-count using blockwise
+  
+  - `gc[count]{motion}` - (Op-pending) Toggles the region using linewise comment
+  
+  - `gb[count]{motion}` - (Op-pending) Toggles the region using blockwise comment
+
+- Modo visual:
+  
+  - `gc` - Toggles the region using linewise comment
+  
+  - `gb` - Toggles the region using blockwise comment
+
+##### Con soporte para VUE/JS:
 
 Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue posible activar el soporte para VUE, indagando me encontré una combinación de dos plugins, [vim-commentary](https://github.com/tpope/vim-commentary) y [vim-context-commentstring](https://github.com/suy/vim-context-commentstring), este ultimo agrega el soporte para VUE, los comandos son similares a los de **nvim-comment**:
 

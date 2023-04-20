@@ -1,8 +1,8 @@
 return {
-  {
-    'lfv89/vim-interestingwords',
-    keys = {
-      { '<leader>k' }
+    {
+        'lfv89/vim-interestingwords',
+        keys = {
+            { '<leader>k' }
+        }
     }
-  }
 }

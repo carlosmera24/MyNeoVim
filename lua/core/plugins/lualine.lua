@@ -1,11 +1,11 @@
 return {
-  {
-    "nvim-lualine/lualine.nvim",
-    dependencies = {
-      "kyazdani42/nvim-web-devicons",
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "kyazdani42/nvim-web-devicons",
+        },
+        config = function()
+            require("lualine").setup()
+        end
     },
-    config = function()
-      require("lualine").setup()
-    end
-  },
 }
