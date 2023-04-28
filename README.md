@@ -357,7 +357,6 @@ ag -V
 ag version 2.2.0
 Features:
   +jit +lzma +zlib
-
 ```
 
 ##### 4. Instalar el plugin FZF.VIM
@@ -600,11 +599,12 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 #### Telecope
 
-[GitHub](https://github.com/nvim-telescope/telescope.nvim) Instalado usando:
+[GitHub](https://github.com/nvim-telescope/telescope.nvim) Instalado con las dependencias
 
-```vim
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
+```lua
+'nvim-lua/plenary.nvim',
+'sharkdp/fd',
+"nvim-telescope/telescope-file-browser.nvim"
 ```
 
 Configuración de comandos definido en `map.vim`
@@ -616,6 +616,28 @@ Configuración de comandos definido en `map.vim`
 - `<leader>fb` Telescope buffers
 
 - `<leader>fh` Telescope help_tags
+
+- `<leader>fe` Telescope file browser
+
+- `<leader>fce` Telescope file browser with the path of the current buffer
+
+- Maps de interacción dentro de `File Explorer`:
+  
+  -  `Tab` Seleccionar
+  
+  - `Alt-c` Crear
+  
+  - `Alt-r` Renombrar
+  
+  - `Alt-m` Mover los archivos/foder seleccionados a la ubicación actual.
+  
+  - `Alt-y` Copiar selección a la ruta actual
+  
+  - `Alt-d` Borrar
+  
+  - `Ctrl-h` Mostrar/ocultar archivos/folder ocultos
+  
+  - `Ctrl-f` Cambiar vista entre file y folder
 
 ### Temas
 
