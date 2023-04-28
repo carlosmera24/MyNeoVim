@@ -295,9 +295,11 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 #### FZF-Vim:
 
-[Vim Awesome](https://vimawesome.com/plugin/fzf-vim) [GitHub](https://github.com/junegunn/fzf.vim) Integra funcionalidades para realizar busqueda de archivos con el complemento para terminal **FZF** ([Vim Awesome](https://vimawesome.com/plugin/fzf) [GitHub](https://github.com/junegunn/fzf)). Según la documentación encontrada, FZF es un buscador de archivos para terminales muy rápido y versatil, para instalarlo en Vim es necesario primero realizar la instalación en el sistema de la siguiente manera:
+[Vim Awesome](https://vimawesome.com/plugin/fzf-vim) [GitHub](https://github.com/junegunn/fzf.vim) Integra funcionalidades para realizar busqueda de archivos con el complemento para terminal **FZF** ([Vim Awesome](https://vimawesome.com/plugin/fzf) [GitHub](https://github.com/junegunn/fzf)), trabajando en conjuto con `Ripgrep` y `Ag(The silver searcher)`. Según la documentación encontrada, FZF es un buscador de archivos para terminales muy rápido y versatil, para instalarlo en Vim es necesario primero realizar la instalación en el sistema de la siguiente manera:
 
-1. **Instalar FZF en el sistema:** En la documentación oficial está las diversas posibilidades para instalar, para mi caso lo realizo utilizando mi gestor de paquetes (Debian APT)
+##### 1. Instalar FZF en el sistema
+
+ En la documentación oficial está las diversas posibilidades para instalar, para mi caso lo realizo utilizando mi gestor de paquetes (Debian APT)
 
 ```shell
 sudo apt install fzf
@@ -305,44 +307,69 @@ sudo apt install fzf
 
 > A este punto podemos ejecutar en terminal **fzf**  y presionar **Enter**, inmediatamente listara los archivos y podemos ingresar la busqueda que queramos en el directorio actual, nos desplazamos usando las flechas del teclado y al presionar **Enter** finaliza el programa listando el documento seleccionado. **Ctrl+R** para buscar en comando.
 
-2. **Instalar Ripgrep:** Se recomienda la instalación para implementar la busca dentro de los archivos, su instalación es similar y se pude encontrar la docuemntación en [GitHub](https://github.com/BurntSushi/ripgrep)
-   
-   ```shell
-   sudo apt install ripgrep
-   ```
-   
-   > Podemos ejecutarlo con **rg -i [cadena a buscar]**
-   
-    Para integrarlo con **FZF** es necesario agregar la siguiente función en *.bashrc* o *.zshrc* según el shell usado, en mi caso es bashrc en *~/.bashrc*
-   
-   ```shell
-   fif() {
-    if [ !"$#" -gt 1 ]; then echo "Need a string to search for!"; return 1; fi
-           rg --files-with-matches --no-messages $1 | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 $1 || rg --ignore-case --pretty --context 10 $1 {}"
-   }
-   ```
-   
-   Esto habilita el comando *fif* en la consola, para lo que es necesario ejecutar *source ~/.bashrc* o cerrar y volver a abrir la consola. Podemos hacer busquedas dentro de **FZF** ejecutando *fif cadena_a_buscar*. 
-   
-    También podemos integrarlo dentro de **FZF** agregando al ~/.bashrc:
-   
-   ```shell
-   if type rg &> /dev/null; then
-   export FZF_DEFAULT_COMMAND='rg --files'
-   export FZF_DEFAULT_OPTS='-m --height 50% --border'
-   fi
-   ```
-   
-   > Hasta el momento no veo una gran funcionalidad, con la integración anterior para el comando *fif* basta,
+##### 2. Instalar Ripgrep
 
-3. **Instalar el plugin FZF.VIM:** Agregar a la configuración de NeoVim:
-   
-   ```shell
-   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-   Plug 'junegunn/fzf.vim'
-   ```
-   
-   Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
+Se recomienda la instalación para implementar la buscar texto dentro de los archivos usando el comando `:Rg`, su instalación es similar y se pude encontrar la docuemntación en [GitHub](https://github.com/BurntSushi/ripgrep)
+
+```shell
+sudo apt install ripgrep
+```
+
+> Podemos ejecutarlo con **rg -i [cadena a buscar]**
+
+ Para integrarlo con **FZF** es necesario agregar la siguiente función en *.bashrc* o *.zshrc* según el shell usado, en mi caso es bashrc en *~/.bashrc*
+
+```shell
+fif() {
+ if [ !"$#" -gt 1 ]; then echo "Need a string to search for!"; return 1; fi
+        rg --files-with-matches --no-messages $1 | fzf --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 $1 || rg --ignore-case --pretty --context 10 $1 {}"
+}
+```
+
+Esto habilita el comando *fif* en la consola, para lo que es necesario ejecutar *source ~/.bashrc* o cerrar y volver a abrir la consola. Podemos hacer busquedas dentro de **FZF** ejecutando *fif cadena_a_buscar*. 
+
+ También podemos integrarlo dentro de **FZF** agregando al ~/.bashrc:
+
+```shell
+if type rg &> /dev/null; then
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_DEFAULT_OPTS='-m --height 50% --border'
+fi
+```
+
+> Hasta el momento no veo una gran funcionalidad, con la integración anterior para el comando *fif* basta,
+
+##### 3. The Silver Searcher (Ag)
+
+[GitHub](https://github.com/ggreer/the_silver_searcher) Esta opción es alternativa y permite hacer busqueda de textos a través del comando `:Ag`, hay varias formas de instalarlo en el sistema operativo:
+
+```shell
+#Debian
+apt-get install silversearcher-ag
+#Linux/Mac
+brew install the_silver_searcher
+```
+
+La versión instalada en Debian, a la fecha, es `2.2.0`
+
+```shell
+ag -V
+ag version 2.2.0
+Features:
+  +jit +lzma +zlib
+
+```
+
+##### 4. Instalar el plugin FZF.VIM
+
+Agregar a la configuración de NeoVim:
+
+```shell
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+```
+
+Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
 #### Git
 
