@@ -132,7 +132,9 @@ NeoVim utiliza la configuraci처n en el archivo **init.lua** para la nueva versi�
 |       |-- plugins
 |           |--... #Archivos .lua por plugin
 |           |--plugins.lua #Definici처n de plugins sin configuraci처n
-|       |-- settings.lua
+|       |-- settings
+|           |-- init.lua #Configuraci처n general
+|           |-- folding.lua #Definici처n de configuraci처n y manejo de fold
 |-- README.md
 ```
 
@@ -623,7 +625,7 @@ Configuraci처n de comandos definido en `map.vim`
 
 - Maps de interacci처n dentro de `File Explorer`:
   
-  -  `Tab` Seleccionar
+  - `Tab` Seleccionar
   
   - `Alt-c` Crear
   

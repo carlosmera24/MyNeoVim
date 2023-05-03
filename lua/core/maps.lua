@@ -20,3 +20,11 @@ map('n', '<leader><Tab>', ':bp<CR>', options)
 map('n', '<leader><BS>', ':bd<CR>', options)
 -- Abrir Explorador nativo con <Leader>E
 map('n', '<leader>E', ':Ex<CR>', options)
+-- Set foldmethod indent
+map('n', '<leader>fi', ':set foldmethod=indent<CR>', cmd_options)
+-- Set foldmethod manual
+map('n', '<leader>fm', ':set foldmethod=manual<CR>', cmd_options)
+-- Collapse L5swager
+map('n', '<leader>zs5', ':lua createFoldsL5Swager()<CR>', options)
+-- Fold collapse all content
+map('n', '<leader>fa', ':setlocal foldmethod=indent<CR>:setlocal foldmethod=manual<CR>', options)
