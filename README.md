@@ -607,6 +607,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 'nvim-lua/plenary.nvim',
 'sharkdp/fd',
 "nvim-telescope/telescope-file-browser.nvim"
+"nvim-telescope/telescope-live-grep-args.nvim"
 ```
 
 Configuración de comandos definido en `map.vim`
@@ -640,6 +641,12 @@ Configuración de comandos definido en `map.vim`
   - `Ctrl-h` Mostrar/ocultar archivos/folder ocultos
   
   - `Ctrl-f` Cambiar vista entre file y folder
+
+- Opciones de filtro para [Telescope-live-grep-args](https://github.com/nvim-telescope/telescope-live-grep-args.nvim):
+  
+  - `"word_search" -g "path/directory/*"`
+  - `"word_search" -t file_type` Ej: `"table" -t js`
+  - `"word_search" --iglob`
 
 ### Temas
 

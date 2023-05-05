@@ -1,7 +1,4 @@
 local cmd = vim.cmd
-local map = vim.api.nvim_set_keymap
-local options = { noremap = true }
-
 -- Folding, activar como indent y permitir el uso manual para crear nuevos
 -- Define foldmethod en indent para el archivo en apertura/lectura
 -- Establece el foldmethod en manual para el archivo en el buffer/abierto

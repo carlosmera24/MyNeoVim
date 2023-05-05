@@ -4,6 +4,8 @@ return {
         tag = '0.1.1',
         dependencies = {
             'nvim-lua/plenary.nvim',
+            -- Search terms/text with filter ripgrep(rg)
+            'nvim-telescope/telescope-live-grep-args.nvim',
             'sharkdp/fd',
             {
                 "nvim-telescope/telescope-file-browser.nvim",
@@ -19,7 +21,8 @@ return {
         },
         keys = {
             { '<leader>ff', ':Telescope find_files<CR>' },
-            { '<leader>fg', ':Telescope live_grep<CR>' },
+            -- { '<leader>fg', ':Telescope live_grep<CR>' },
+            { '<leader>fg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>' },
             { '<leader>fb', ':Telescope buffers<CR>' },
             { '<leader>fh', ':Telescope help_tags<CR>' },
         },
@@ -33,7 +36,7 @@ return {
                         hijack_netrw = true,
                         mappings = {
                             ["i"] = {
-                                -- your custom insert mode mappings
+                                -- your custom insert mode mapping
                             },
                             ["n"] = {
                                 -- your custom normal mode mappings
@@ -44,8 +47,9 @@ return {
             }
             -- To get telescope-file-browser loaded and working with telescope,
             -- you need to call load_extension, somewhere after setup function:
-            require("telescope").load_extension "file_browser"
+            require("telescope").load_extension("file_browser")
+            -- Search with filter on live grep 
+            require("telescope").load_extension("live_grep_args")
         end
-
     }
 }
