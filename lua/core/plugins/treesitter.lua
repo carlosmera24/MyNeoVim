@@ -15,11 +15,11 @@ return {
         opts = {
             highlight = {
                 enable = true,
-                additional_vim_regex_highlighting = true,
+                additional_vim_regex_highlighting = false,
             },
             indent = {
                 enable = true,
-                disable = { "python" }
+                disable = { "python", "json" }
             },
             context_commentstring = {
                 enable = true,
@@ -40,7 +40,7 @@ return {
                 "css",
                 "html",
                 "javascript",
-                "json",
+                "json", -- se habilitan la visualización de comillas en indentline.lua
                 "lua",
                 "markdown_inline",
                 "php",
@@ -52,6 +52,6 @@ return {
         },
         config = function(_,opts)
             require("nvim-treesitter.configs").setup(opts)
-        end
+       end
     },
 }
