@@ -61,6 +61,7 @@ return {
     ["html"] = default,
     ["svelte"] = default, --css, scss, less, js, html,
     ["tailwindcss"] = default, --css
+    ["cssls"] = default, --css
     ["tsserver"] = default, -- js
     ["volar"] = default, --vue
     ["intelephense"] = default, -- php
