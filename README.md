@@ -610,6 +610,19 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 "nvim-telescope/telescope-live-grep-args.nvim"
 ```
 
+##### Dependencias externas sugeridos.
+
+`checkhealth telescope` permite validar el estado de Telescope y los complementos sugeridos, entre ellos:
+
+- **rg**: Correspondiente a `ripgrep` Ver [Instalar Ripgrep](#2.-instalar-ripgrep)
+- **fd**: [GitHub](https://github.com/sharkdp/fd) 
+  
+  ```shell
+  sudo apt install fd-find
+  ```
+
+##### Maps
+
 Configuración de comandos definido en `map.vim`
 
 - `<leader>ff ` Telescope find_files
@@ -622,7 +635,7 @@ Configuración de comandos definido en `map.vim`
 
 - `<leader>fe` Telescope file browser
 
-- `<leader>fce` Telescope file browser with the path of the current buffer
+- `<leader>fce` Telescope file browser with the path of the current bufferss
 
 - Maps de interacción dentro de `File Explorer`:
   
