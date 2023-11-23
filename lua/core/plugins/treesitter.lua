@@ -51,7 +51,15 @@ return {
             },
         },
         config = function(_,opts)
-            require("nvim-treesitter.configs").setup(opts)
+            -- Eliminar warning: context_commentstring nvim-treesitter module is deprecated, 
+            -- use use require('ts_context_commentstring').setup {} 
+            -- and set vim.g.skip_ts_context_commentstring_module = true to speed up loading instead.                                                                                                                         
+            -- This feature will be removed in ts_context_commentstring version in the future
+            -- Old line:
+            -- require("nvim-treesitter.configs").setup(opts)
+            -- New lines:
+            require('ts_context_commentstring').setup(opts)
+            vim.g.skip_ts_context_commentstring_module = true
        end
     },
 }
