@@ -6,11 +6,15 @@ return {
         event = { "BufReadPost", "BufNewFile" },
         dependencies = {
             "nvim-treesitter/nvim-treesitter-textobjects",
-            --[[ JoosepAlviste/nvim-ts-context-commentstring genera:
-            context_commentstring nvim-treesitter module is deprecated, use use require('ts_context_commentstring').setup {}
-            and set vim.g.skip_ts_context_commentstring_module = true to speed up loading instead.
-            This feature will be removed in ts_context_commentstring version in the future ]]
-            -- 'JoosepAlviste/nvim-ts-context-commentstring',
+            {
+                'JoosepAlviste/nvim-ts-context-commentstring',
+                config = function()
+                    require('ts_context_commentstring').setup {
+                        enable_autocmd = false,
+                    }
+                    vim.g.skip_ts_context_commentstring_module = true
+                end
+            },
         },
         keys = {
             { "<c-space>", desc = "Increment selection" },
@@ -25,10 +29,28 @@ return {
                 enable = true,
                 disable = { "python", "json" }
             },
-            context_commentstring = {
+            textobjects = {
+                select = {
+                    enable = true,
+                    lookahead = true,
+                    keymaps = {
+                        ["af"] = "@function.outer",
+                        ["if"] = "@function.inner",
+                        ["ac"] = "@conditional.outer",
+                        ["ic"] = "@conditional.inner",
+                        ["al"] = "@loop.outer",
+                        ["il"] = "@loop.inner",
+                    },
+                },
+            },
+            --[[ JoosepAlviste/nvim-ts-context-commentstring genera:
+            context_commentstring nvim-treesitter module is deprecated, use use require('ts_context_commentstring').setup {}
+            and set vim.g.skip_ts_context_commentstring_module = true to speed up loading instead.
+            This feature will be removed in ts_context_commentstring version in the future ]]
+            --[[ context_commentstring = {
                 enable = true,
                 enable_autocmd = true,
-            },
+            }, ]]
             incremental_selection = {
                 enable = true,
                 keymaps = {
