@@ -34,12 +34,12 @@ return {
                     enable = true,
                     lookahead = true,
                     keymaps = {
-                        ["af"] = "@function.outer",
-                        ["if"] = "@function.inner",
-                        ["ac"] = "@conditional.outer",
-                        ["ic"] = "@conditional.inner",
-                        ["al"] = "@loop.outer",
-                        ["il"] = "@loop.inner",
+                        ["af"] = "@function.outer",--Seleccionar la función externa
+                        ["if"] = "@function.inner",--Seleccionar la función interna
+                        ["ac"] = "@conditional.outer",--Seleccionar la condición externa
+                        ["ic"] = "@conditional.inner",--Seleccionar la condición interna
+                        ["al"] = "@loop.outer",--Seleccionar el bucle externo
+                        ["il"] = "@loop.inner",--Seleccionar el bucle interno
                     },
                 },
             },

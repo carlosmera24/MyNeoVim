@@ -427,6 +427,15 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   - `Ctrl+space`: Incrementar/Iniciar selección
   
   - `Backspace`: Decementar selección
+  
+  - `textobjects`: Permite seleccionar rápidamente ingresando en modo visual(`:v`):
+    
+    - `af`: "Seleccionar la función externa" (Select the outer function).
+    - `if`: "Seleccionar la función interna" (Select the inner function).
+    - `ac`: "Seleccionar la condición externa" (Select the outer conditional statement).
+    - `ic`: "Seleccionar la condición interna" (Select the inner conditional statement).
+    - `al`: "Seleccionar el bucle externo" (Select the outer loop).
+    -  `il`: "Seleccionar el bucle interno" (Select the inner loop).
 
 > Para `blade` (Laravel) no hay un soporte directo, por lo que me es necesario usar un plugin adicional, **vim-blade**.
 
@@ -615,6 +624,7 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 `checkhealth telescope` permite validar el estado de Telescope y los complementos sugeridos, entre ellos:
 
 - **rg**: Correspondiente a `ripgrep` Ver [Instalar Ripgrep](#2.-instalar-ripgrep)
+
 - **fd**: [GitHub](https://github.com/sharkdp/fd) 
   
   ```shell
