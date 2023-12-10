@@ -435,7 +435,7 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
     - `ac`: "Seleccionar la condición externa" (Select the outer conditional statement).
     - `ic`: "Seleccionar la condición interna" (Select the inner conditional statement).
     - `al`: "Seleccionar el bucle externo" (Select the outer loop).
-    -  `il`: "Seleccionar el bucle interno" (Select the inner loop).
+    - `il`: "Seleccionar el bucle interno" (Select the inner loop).
 
 > Para `blade` (Laravel) no hay un soporte directo, por lo que me es necesario usar un plugin adicional, **vim-blade**.
 
@@ -670,6 +670,46 @@ Configuración de comandos definido en `map.vim`
   - `"word_search" -g "path/directory/*"`
   - `"word_search" -t file_type` Ej: `"table" -t js`
   - `"word_search" --iglob`
+
+#### Oil Vim
+
+Explorador de archivos estilo editor texto [GitHub](https://github.com/stevearc/oil.nvim), todo el CRUD se realiza a nivel del editor de texto. Mi configuración está para que se inicialice el plugin al presionar `-` o ejecutar `:Oil`, de igual manera uso el modo flotante
+
+##### Maps
+
+- `-` Abrir explorador en el directorio actual en modo `Normal`.
+
+- `g?` Mostrar ayuda.
+
+- `Enter` Abrir ubicación
+
+- `Ctrl+s` Abrir archivo seleccionado Split vertical
+
+- `Ctrl+h` Abrir archivo seleccionado Split horizontal
+
+- `Ctrl+t` Abrir archivo seleccionado en tab/buffer
+
+- `Ctrl+p` Abrir preview (`Requiere configurción adicional`)
+
+- `Ctrl+c` Cerrar
+
+- `Ctrl+l` Refrescar
+
+- `-` Retornar o regresar
+
+- `_` Abrir CWD
+
+- ` cd
+
+- `~` tcd
+
+- `gs` Ordenar
+
+- `gx` Abrir external
+
+- `g.` Cambiar visualización de archivos ocultos
+
+- `g\\` Cambiar a papelera/Trash
 
 ### Temas
 
