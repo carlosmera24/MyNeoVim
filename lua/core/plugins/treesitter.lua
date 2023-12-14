@@ -68,6 +68,7 @@ return {
                 "javascript",
                 "json", -- se habilitan la visualización de comillas en indentline.lua
                 "lua",
+                "kotlin",
                 "markdown_inline",
                 "php",
                 "scss",
