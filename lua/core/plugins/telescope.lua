@@ -5,7 +5,17 @@ return {
         dependencies = {
             'nvim-lua/plenary.nvim',
             -- Search terms/text with filter ripgrep(rg)
-            'nvim-telescope/telescope-live-grep-args.nvim',
+            { 
+                'nvim-telescope/telescope-live-grep-args.nvim',
+                keys = {
+                    {
+                        '<leader>fs',
+                        ':lua require("telescope-live-grep-args.shortcuts").grep_word_under_cursor()<CR>',
+                        mode = { "v" },
+                        desc = "Start live grep with visual selection.",
+                    },
+                }
+            },
             'sharkdp/fd',
             {
                 "nvim-telescope/telescope-file-browser.nvim",
@@ -21,10 +31,15 @@ return {
         },
         keys = {
             { '<leader>ff', ':Telescope find_files<CR>' },
-            -- { '<leader>fg', ':Telescope live_grep<CR>' },
             { '<leader>fg', ':lua require("telescope").extensions.live_grep_args.live_grep_args()<CR>' },
             { '<leader>fb', ':Telescope buffers<CR>' },
             { '<leader>fh', ':Telescope help_tags<CR>' },
+            {
+                '<leader>fs',
+                ':Telescope grep_string<CR>',
+                mode = { "n" },
+                desc = "Start live grep with word under cursor.",
+            },
         },
         cmd = { "Telescope" },
         config = function()
