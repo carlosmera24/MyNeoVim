@@ -372,6 +372,14 @@ Plug 'junegunn/fzf.vim'
 
 Se recomiendo *'junegunn/fzf', { 'do': { -> fzf#install() } }* para garantizar que tengamos la última versión de **FZF**
 
+#### 5. Maps:
+
+- `leader+t`: Buscar archivos
+
+- `leader+F`: Buscar cadena dentro de los archivos con Rg
+
+- `leader+G`: Buscar cadena dentro de los archivos con Ag
+
 #### Git
 
 1. **Fugitive.vim**: [Vim Awesome](https://vimawesome.com/plugin/fugitive-vim) [GitHub](https://github.com/tpope/vim-fugitive) Integra comandos para el uso de git, además se integra muy bien con **Airline**, se puede invocar utilizando `:G` o `:Git` para visualizar el estado e información del proyecto actual, a su vez se complementa con todos los comandos de git, ejemplo: `:G status`.
@@ -643,6 +651,8 @@ Configuración de comandos definido en `map.vim`
 
 - `<leader>fh` Telescope help_tags
 
+- `<leader>fs` In mode `v` and `v`, start live grep with cursor or selecction. fg fg
+
 - `<leader>fe` Telescope file browser
 
 - `<leader>fce` Telescope file browser with the path of the current bufferss
@@ -741,4 +751,56 @@ Los temas se pueden consultar en https://vimcolorschemes.com/
      set re=1
      ```
 
-2. 
+## Utilidades/Consejos
+
+### Buscar
+
+#### Texto dentro de ficheros
+
+Cuando necesito buscar una cadena de texto en los archivos o directorio específico de manera repetitiva uso:
+
+```vim
+:grep -r -w "cadena a buscar" ruta/deseada/
+```
+
+> Después de ejecutarla puedo presionar `ENTER` y abrirá el primer archivo, o ejecutar `:copen` para el buffer con el listado e ir trabajando su apertura de cada archivo a gusto.
+> 
+> `-w` busca la cadena exacta w
+> 
+> `-o` permite incluir carácteres especiales que no se aplican con `-w`, por tanto se usa sin este último, por ejemplo _.cadena_ `:grep -ro ".cadena" ruta/`
+
+#### Cadena de texto
+
+- `?` `/` `:?` `:/`  Segido de la cadena a buscar
+  
+  > `\<cadena\>` Busca exactamente la cadena
+
+- `*` Sobre el cursor
+
+- Desplazamiento en los resultados:
+  
+  - `Ctrl+o` permite volver al origen de la busqueda
+  
+  - `n` `N` Moverse en resultado.
+
+#### Reemplazar
+
+- `:%s/cadena_origen/cadena_destino` Reemplazar todo en el documento.
+
+- **Selección modo V**: después de tener seleccionado una ubicación se presiona `:`automáticamente command line inicia a `:'<,'>` esto indica que aplicará para la región seleccionanda y se prosigue a definir la cadena origen y la cadena reemplazo `:'<,'>s/cadena_origen/cadena_reemplazo`
+  
+  > Es muy practico porque podemos seleccionar varias líeas donde queremos aplicar ese reeemplazo, auque reemplazará solo una ocurrencia por linea, es necesario modificar las ocurrencias con `/g` por ejemplo.
+
+- **Condicionles o modificadores:** Se agregan al final de la sentencia después de `/`
+  
+  - `g`: Repetir el reeemplazo varias ocurrencias, ejemplo `:'<,'>s/cadena_origen/cadena_reemplazo/g`
+  
+  - `c`: Interactivo, es decir, pide confirmación para reemplazar esa ocurrencia
+
+- **Expresiones regulares**: Buscar y reemplazar permite utilizar tanto una cadena específica como expresiones reagulares, tanto para búsqueda como reemplazo, por ejemplo: reemplazar todas las `,` por `; más salto de líneas`, podemos usar la expresión regular `\r` para el salgo de línea
+  
+  ```vim
+  :s/,/;\r/g
+  ```
+
+- **Con comandos**: buscar y ejecutar comandos, se usa en combinación con `g/` y su negación `g!/`
