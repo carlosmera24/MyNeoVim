@@ -4,7 +4,7 @@ return {
     -- Optional dependencies
     dependencies = { 
         -- lualine usa "kyazdani42/nvim-web-devicons",
-        -- "nvim-tree/nvim-web-devicons"
+        "nvim-tree/nvim-web-devicons"
     },
     keys = {
         -- Apertura del explorador de forma flotante en modo normal

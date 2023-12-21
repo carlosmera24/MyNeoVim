@@ -156,7 +156,7 @@ Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim)
 
 Dentro de las opciones que tenemos para configurar los plugins:
 
-1. Estrucutara:
+1. Estructura:
    
    ```lua
    return {
@@ -720,6 +720,24 @@ Explorador de archivos estilo editor texto [GitHub](https://github.com/stevearc/
 - `g.` Cambiar visualización de archivos ocultos
 
 - `g\\` Cambiar a papelera/Trash
+
+#### Glow
+
+Este plugin permite inetegrar facilmente la visualización previa de un documento `markdown` con [Glow](https://github.com/charmbracelet/glow).
+Para instalarlo, en sistemas Linux/Mac podemos usar brew:
+
+```shell 
+brew install glow
+```
+El plugin lo podemos encontrar en el [link](https://github.com/ellisonleao/glow.nvim/tree/main) y toda su documentación.
+Para ejecutarlo basta con:
+
+- `:Glow` Abre la vista previa del archivo actual.
+
+- `:Glow path_file` Abre la vista previa del archivo indicado
+
+- `<leader>gv` Es el map para abrir la vista previa del archivo actual.
+
 
 ### Temas
 
