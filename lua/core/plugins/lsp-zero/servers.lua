@@ -71,4 +71,5 @@ return {
             filetypes = { "php", "cucumber" },
         }
     end,
+    ["pyright"] = default, -- python
 }

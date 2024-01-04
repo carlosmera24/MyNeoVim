@@ -75,6 +75,7 @@ return {
                 "typescript",
                 "vim",
                 "vue",
+                "python",
             },
         },
         config = function(_,opts)
