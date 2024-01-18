@@ -726,9 +726,10 @@ Explorador de archivos estilo editor texto [GitHub](https://github.com/stevearc/
 Este plugin permite inetegrar facilmente la visualización previa de un documento `markdown` con [Glow](https://github.com/charmbracelet/glow).
 Para instalarlo, en sistemas Linux/Mac podemos usar brew:
 
-```shell 
+```shell
 brew install glow
 ```
+
 El plugin lo podemos encontrar en el [link](https://github.com/ellisonleao/glow.nvim/tree/main) y toda su documentación.
 Para ejecutarlo basta con:
 
@@ -738,6 +739,41 @@ Para ejecutarlo basta con:
 
 - `<leader>gv` Es el map para abrir la vista previa del archivo actual.
 
+
+
+#### Asistentes IA / Autocompletado
+
+##### Codeium
+
+Una buena alternativa a **GitHub Copilot**, permite autocompletado de codigo con IA, su [Github](https://github.com/Exafunction/codeium.vim)  y [Web](https://codeium.com/), require registro en su web para uso gratuito, tras instalar se debe utilizar:
+
+```vim
+:Codeim Auth
+```
+
+> Esto permite ingresar a la Web y generar un token para autenticación.
+
+Al insertar escribir se generará automáticamente sugerencias que pueden completarse o aceptarse con tab.
+
+###### Maps:
+
+- `<C-]>` Limpiar
+
+- `<M-]>` Siguiente sugerencia
+
+- `<M-[>` Anterior sugerencia
+
+- `<C-s>` Insertar sugenrecia o aceptarla, por defecto es `<Tab>`, pero entra en confilcto con el autocompletado
+
+- `<M-Bslash>` (`Alt+\`)Activar manualmente la sugerencia
+
+
+
+##### Tabnine
+
+[Github](https://github.com/codota/tabnine-nvim) [Web](https://www.tabnine.com/) Otra opción
+
+> Sin probar, actualmente estoy usando Codium
 
 ### Temas
 
