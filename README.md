@@ -148,6 +148,34 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 
 3. [This week in neovim](https://this-week-in-neovim.org/): Recopilación de noticias, actualizaciones, nuevos temas, entre otros datos de interes.
 
+## Maps Generales:
+
+- `space` Tecla lider
+
+- `space+w` Guardar
+
+- `space+q` Salir
+
+- `Ctrl+t` Abrir terminal
+
+- `Shift+Tab` Siguiente buffer o pestaña (`:Bnext`)
+
+- `space+tab` Anterior buffer o pestaña (`:BPrevious`)
+
+- `space+Backspace` Borrar buffer actual (`:BDelete`)
+
+- `space` Abrir explorador nativo de vim (`:Ex`)
+
+- `space+fi` Definir foldmethod indent
+
+- `space+fm` Definir foldmethod manual
+
+- `space+zs5` Pliega (Collapse) todos los folds para la documentación de L5Swagger, requiere foldmethod manual
+
+- `space+fa` Pliega (Collapse) todo el contenido 
+
+- `Alt+r` Regarca vimrc (`:source $MYVIMRC`), util para recargar después de cambios en Vim w
+
 ## Plugins y temas
 
 Para gestionar los temas he utilizado [Lazy](https://github.com/folke/lazy.nvim), definiendo la instalación en el archivo `init.lua` y los plugins en la carpeta `plugins`. Una gran diferencia con Plug-Vim es la instalación al inicio automática y poder definir que plugins quiero instalar para el tipo de archivos y/o el inicio cuando se invoca un comando o tecla.
@@ -739,8 +767,6 @@ Para ejecutarlo basta con:
 
 - `<leader>gv` Es el map para abrir la vista previa del archivo actual.
 
-
-
 #### Asistentes IA / Autocompletado
 
 ##### Codeium
@@ -766,8 +792,6 @@ Al insertar escribir se generará automáticamente sugerencias que pueden comple
 - `<C-s>` Insertar sugenrecia o aceptarla, por defecto es `<Tab>`, pero entra en confilcto con el autocompletado
 
 - `<M-Bslash>` (`Alt+\`)Activar manualmente la sugerencia
-
-
 
 ##### Tabnine
 
