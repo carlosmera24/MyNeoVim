@@ -39,6 +39,12 @@ Para tener un mayor control y libertad de la configuración, así como el tipo y
    nvim
    ```
    
+   **Arch Linux** se puede instalar directamente desde `pacman` o `yay` con la última actualización:´
+   
+   ```shell
+   sudo pacman -S neovim
+   ```
+   
    **Mac** Utilizamos el instalado de **Brew**, partiendo de él ejecutamos:
    
    ```shell
@@ -210,6 +216,8 @@ Dentro de las opciones que tenemos para configurar los plugins:
   ```shell
   sudo pip install powerline-status
   sudo apt-get install fonts-powerline
+  #Arch
+  sudo pacman -S powerline-fonts
   ```
 
 - **Mac:**
@@ -257,11 +265,12 @@ Dentro de las opciones que tenemos para configurar los plugins:
 
 #### Vim-Devicons:
 
-[Vim Awesome](https://vimawesome.com/plugin/vim-devicons) [GitHub](https://github.com/ryanoasis/vim-devicons) Integración de iconos para NerdTree. Para su instalación es necesario instalar una fuente compatible, yo utilizo la opción 6 en la doucmentación [GitHub - ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation), para Linux:
+[Vim Awesome](https://vimawesome.com/plugin/vim-devicons) [GitHub](https://github.com/ryanoasis/vim-devicons) Integración de iconos para NerdTree. Para su instalación es necesario instalar una fuente compatible, yo utilizo la opción 6 en la doucumentación [GitHub - ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts#font-installation), para Linux:
 
 ```shell
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+
 ```
 
    Para **Mac** utilizo la opción 4:
@@ -348,6 +357,8 @@ fi
 ```shell
 #Debian
 apt-get install silversearcher-ag
+#Arch
+sudo pacman -S the_silver_searcher
 #Linux/Mac
 brew install the_silver_searcher
 ```
@@ -637,6 +648,8 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
   
   ```shell
   sudo apt install fd-find
+  #Arch
+  sudo pacman -S fd
   ```
 
 ##### Maps
@@ -728,6 +741,8 @@ Para instalarlo, en sistemas Linux/Mac podemos usar brew:
 
 ```shell
 brew install glow
+#Arch
+sudo pacman -S glow
 ```
 
 El plugin lo podemos encontrar en el [link](https://github.com/ellisonleao/glow.nvim/tree/main) y toda su documentación.
@@ -738,8 +753,6 @@ Para ejecutarlo basta con:
 - `:Glow path_file` Abre la vista previa del archivo indicado
 
 - `<leader>gv` Es el map para abrir la vista previa del archivo actual.
-
-
 
 #### Asistentes IA / Autocompletado
 
@@ -766,8 +779,6 @@ Al insertar escribir se generará automáticamente sugerencias que pueden comple
 - `<C-s>` Insertar sugenrecia o aceptarla, por defecto es `<Tab>`, pero entra en confilcto con el autocompletado
 
 - `<M-Bslash>` (`Alt+\`)Activar manualmente la sugerencia
-
-
 
 ##### Tabnine
 
