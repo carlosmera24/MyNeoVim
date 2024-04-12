@@ -2,9 +2,9 @@ return {
     'stevearc/oil.nvim',
     opts = {},
     -- Optional dependencies
-    dependencies = { 
-        -- lualine usa "kyazdani42/nvim-web-devicons",
-        "nvim-tree/nvim-web-devicons"
+    dependencies = {
+        -- lualine usa "kyazdani42/nvim-web-devicons", por esa razón no lo necesitamos
+        -- "nvim-tree/nvim-web-devicons"
     },
     keys = {
         -- Apertura del explorador de forma flotante en modo normal
