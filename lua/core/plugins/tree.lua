@@ -2,8 +2,10 @@ return {
     {
         'nvim-tree/nvim-tree.lua',
         config = function()
-            vim.g.loaded_netrw = 1
-            vim.g.loaded_netrwPlugin = 1
+            -- disable netrw at the very start of your init.lua, sin embargo yo quiero tener habilitado el uso del 
+            -- explorador de archivos nativo de nvim
+            -- vim.g.loaded_netrw = 1
+            -- vim.g.loaded_netrwPlugin = 1
             vim.g.termguicolors = true
 
             require("nvim-tree").setup({
