@@ -3,7 +3,7 @@ return {
     opts = {},
     -- Optional dependencies
     dependencies = {
-        -- lualine usa "kyazdani42/nvim-web-devicons", por esa razón no lo necesitamos
+        -- Definido en lualine
         -- "nvim-tree/nvim-web-devicons"
     },
     keys = {
