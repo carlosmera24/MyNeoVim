@@ -245,7 +245,7 @@ Dentro de las opciones que tenemos para configurar los plugins:
   sudo pip install powerline-status
   sudo apt-get install fonts-powerline
   #Arch
-  sudo pacman -S powerline-fonts
+  sudo pacman -S powerline-fonts otf-droid-nerd ttf-fira-code 
   ```
 
 - **Mac:**
@@ -298,7 +298,6 @@ Dentro de las opciones que tenemos para configurar los plugins:
 ```shell
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
-
 ```
 
    Para **Mac** utilizo la opción 4:

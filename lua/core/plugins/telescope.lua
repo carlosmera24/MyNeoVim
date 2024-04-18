@@ -4,8 +4,9 @@ return {
         tag = '0.1.4',
         dependencies = {
             'nvim-lua/plenary.nvim',
+            "nvim-tree/nvim-web-devicons",
             -- Search terms/text with filter ripgrep(rg)
-            { 
+            {
                 'nvim-telescope/telescope-live-grep-args.nvim',
                 keys = {
                     {

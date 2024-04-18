@@ -3,7 +3,7 @@ return {
     opts = {},
     -- Optional dependencies
     dependencies = {
-        -- Definido en lualine
+        -- Definido en telescope
         -- "nvim-tree/nvim-web-devicons"
     },
     keys = {

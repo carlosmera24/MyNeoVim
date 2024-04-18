@@ -2,6 +2,7 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {
+            -- Utilizado y definido en telescope
             "nvim-tree/nvim-web-devicons",
         },
         config = function()
