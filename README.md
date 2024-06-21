@@ -636,11 +636,11 @@ Inicialmente usé **nvim-comment** citado en el siguiente punto, pero no me fue 
 
 #### Colorizer:
 
-  [GitHub](https://github.com/RRethy/vim-hexokinase) Resaltar los colores con su color correspondiente:
+  [GitHub]([GitHub - chrisbra/Colorizer: color hex codes and color names](https://github.com/chrisbra/Colorizer) Resaltar los colores con su color correspondiente:
 
-- `:ColorHighlight`: Resaltar colores `<Alt+c>-h`
+- `:ColorHighlight`: Resaltar colores `<Alt+c><Alt+h>`
 
-- `:ColorClear`: Limpiar resaltado `<Alt+c>-c` 
+- `:ColorClear`: Limpiar resaltado `<Alt+c><Alt+c>` 
 
 - `:h colorizer`: Ayuda y más comandos
 

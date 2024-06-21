@@ -2,9 +2,9 @@ return {
     {
         'chrisbra/colorizer',
         keys = {
-            { "<A-c>h", ":ColorHighlight<CR>" },
-            { "<A-c>c", ":ColorClear<CR>" },
+            { "<M-c><M-h>", ":ColorHighlight<CR>", mode = { "n" }, desc = "Color highlight" },
+            { "<M-c><M-c>", ":ColorClear<CR>", mode = { "n" }, desc = "Color clear" },
         },
-        cmd = "ColorHighlight"
+        cmd = "ColorHighlight",
     }
 }
