@@ -62,7 +62,7 @@ return {
     ["svelte"] = default, --css, scss, less, js, html,
     ["tailwindcss"] = default, --css
     ["cssls"] = default, --css
-    ["tsserver"] = default, -- js
+    ["ts_ls"] = default, -- js
     -- ["volar"] = default, --vue
     ["volar"] = function()
         local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
