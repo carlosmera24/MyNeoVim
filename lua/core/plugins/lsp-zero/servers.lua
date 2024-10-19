@@ -10,6 +10,8 @@ end
 
 return {
     ["emmet_ls"] = function()
+        -- Blade requiere configuración adicional agregada para LSP con la función setup_emmet_for_blade() 
+
         local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
         return {
@@ -28,6 +30,11 @@ return {
                 "vue"
             },
             init_options = {
+                html = {
+                    options = {
+                        ["bem.enabled"] = true, -- Opcional: habilita soporte para BEM
+                    },
+                },
                 embeddedLanguages = {
                     blade = "html"
                 }
