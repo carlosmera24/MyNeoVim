@@ -25,9 +25,16 @@ return {
             {'williamboman/mason-lspconfig.nvim'},
 
             -- Autocompletion
-            {'hrsh7th/cmp-nvim-lsp'},     -- Required
             {'hrsh7th/nvim-cmp'},         -- Required
-            {'hrsh7th/cmp-buffer'},       -- Requiered to use buffer on cmp sources
+            {'hrsh7th/cmp-nvim-lsp'},     -- Required
+            {'hrsh7th/cmp-buffer'},       -- Optional
+            {'hrsh7th/cmp-path'},         -- Optional
+            {'saadparwaiz1/cmp_luasnip'}, -- Optional
+            {'hrsh7th/cmp-nvim-lua'},     -- Optional
+
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},             -- Required
+            {'rafamadriz/friendly-snippets'}, -- Optional
         },
         config = function()
             -- Reserve a space in the gutter
@@ -107,6 +114,26 @@ return {
                     -- Navigation with Tab on menu
                     ['<Tab>'] = cmp_action.luasnip_supertab(),
                     ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+                    -- ['<Tab>'] = function(fallback)
+                    --     if cmp.visible() then
+                    --         cmp.select_next_item()
+                    --     elseif luasnip.expand_or_jumpable() then
+                    --         luasnip.expand_or_jump()
+                    --     elseif vim.fn.col('.') == 1 or vim.fn.getline('.'):sub(vim.fn.col('.') - 1, vim.fn.col('.') - 1):match('%s') then
+                    --         fallback()  -- Aplica la indentación normal
+                    --     else
+                    --         cmp.complete()
+                    --     end
+                    -- end,
+                    -- ['<S-Tab>'] = function(fallback)
+                    --     if cmp.visible() then
+                    --         cmp.select_prev_item()
+                    --     elseif luasnip.jumpable(-1) then
+                    --         luasnip.jump(-1)
+                    --     else
+                    --         fallback()  -- Aplica el comportamiento predeterminado
+                    --     end
+                    -- end,
                 }),
                 snippet = {
                     expand = function(args)
