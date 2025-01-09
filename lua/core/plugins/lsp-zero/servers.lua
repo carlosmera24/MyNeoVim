@@ -92,7 +92,6 @@ return {
             },
         }
     end,
-    ["vuels"] = default, --vue
     ["intelephense"] = default, -- php
     ["phpactor"] = function()
         return {
