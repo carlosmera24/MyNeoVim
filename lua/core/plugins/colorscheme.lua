@@ -7,7 +7,7 @@ return {
         config = function()
             -- definir el tema/colorscheme
             -- vim.cmd([[colorscheme nord]])
-            vim.cmd([[colorscheme tokyonight-night]])
+            vim.cmd([[colorscheme tokyonight-moon]])
         end
     },
 }

@@ -139,6 +139,7 @@ NeoVim utiliza la configuración en el archivo **init.lua** para la nueva versi�
 |       |-- plugins
 |           |--... #Archivos .lua por plugin
 |           |--plugins.lua #Definición de plugins sin configuración
+|           |--colorscheme.lua #Tema, plugin y configuración.
 |       |-- settings
 |           |-- init.lua #Configuración general
 |           |-- folding.lua #Definición de configuración y manejo de fold
@@ -814,9 +815,9 @@ Al insertar escribir se generará automáticamente sugerencias que pueden comple
 
 ### Temas
 
-Los temas se pueden consultar en https://vimcolorschemes.com/
+Los temas se pueden consultar en https://vimcolorschemes.com/ y se define/configura en `core/plugins/colorscheme.lua`, actualmente uso **Tokyo Night moon**
 
-1. **Tokyo Night** 
+1. **Tokyo Night**: [GitHub](https://github.com/folke/tokyonight.nvim?tab=readme-ov-file): Variantes `moon`, `night`, `storm`, `day` 
 2. **Nord Vim:** [Vim Awesome](https://vimawesome.com/plugin/nord-vim) [GitHub](https://github.com/arcticicestudio/nord-vim)
 3. Iceberg  
 4. onedark
