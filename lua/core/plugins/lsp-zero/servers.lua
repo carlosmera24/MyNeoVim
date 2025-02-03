@@ -70,28 +70,8 @@ return {
     ["tailwindcss"] = default, --css
     ["cssls"] = default, --css
     ["ts_ls"] = default, -- js
-    -- ["volar"] = default, --vue
-    ["volar"] = function()
-        local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-        return {
-            flags = lsp_flags,
-            capabilities = capabilities,
-            init_options = {
-                plugins = {
-                    {
-                        name = "@vue/typescript-plugin",
-                        location = mason_lspconfig.get_mason_dir(), -- ~/.local/share/nvim/mason, usado para node_modules/@vue/typescript-plugin
-                        languages = {"javascript", "typescript", "vue"},
-                    },
-                },
-            },
-            filetypes = {
-                "javascript",
-                "typescript",
-                "vue",
-            },
-        }
-    end,
+    ["volar"] = default, --vue
+    ["vuels"] = default, --vue
     ["intelephense"] = default, -- php
     ["phpactor"] = function()
         return {

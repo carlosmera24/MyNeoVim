@@ -438,7 +438,7 @@ Migre a LSP depués de usar COC por mucho tiempo, para ello he usado [lsp-zero.n
   
   - `init.lua` para definir los requerimientos a instalar y la configuración del plugin.
   
-  - `servers.lua` definición de los servidores LSP que deseo que se instalen automáticamente al ejecutar Mason, los servidores diponibles se pueden listar en [nvim-lsp](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)
+  - `servers.lua` definición de los servidores LSP que deseo que se instalen automáticamente al ejecutar Mason, los servidores diponibles se pueden listar en [nvim-lsp](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md)
 
 - `:Mason` Me permite acceder al menú de control de los servidores LSP, instalar, actualizar, eliminar y listar. Aunque al definir el archivo `servers` los servidores se instalan automáticamente en el inicio de nvim, preguntando si se dea instalar el listado.
 
@@ -811,7 +811,7 @@ Al insertar escribir se generará automáticamente sugerencias que pueden comple
 
 [Github](https://github.com/codota/tabnine-nvim) [Web](https://www.tabnine.com/) Otra opción
 
-> Sin probar, actualmente estoy usando Codium
+> Sin probar, actualmente estoy usando Codium, he dejado el archivo de instalación comentado
 
 ### Temas
 
